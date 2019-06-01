@@ -21,7 +21,7 @@
 
         <div id="page-wrapper">
 
-          <?php include "includes/admin_content.php"; ?>
+          <?php include "includes/users_content.php"; ?>
 
         </div>
         <!-- /#page-wrapper -->
