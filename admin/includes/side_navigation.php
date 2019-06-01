@@ -7,10 +7,10 @@
                         <a href="users.php"><i class="fa fa-fw fa-bar-chart-o"></i> Users</a>
                     </li>
                     <li>
-                        <a href="upload.php"><i class="fa fa-fw fa-table"></i> Upload</a>
+                        <a href="upload.php"><i class="fa fa-fw fa-camera-retro"></i> Upload</a>
                     </li>
                     <li>
-                        <a href="photos.php"><i class="fa fa-fw fa-table"></i> Photos</a>
+                        <a href="photos.php"><i class="fa fa-fw fa-image"></i> Photos</a>
                     </li>
                     <li>
                         <a href="comments.php"><i class="fa fa-fw fa-edit"></i> Comments</a>
