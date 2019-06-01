@@ -21,7 +21,7 @@
            <!-- CLOSE TOP MENU ITEM-->
 
             <!-- SIDEBAR MENU ITEMS -->
-
+             <?php include "includes/side_navigation.php"; ?>
             <!-- CLOSE SIDEBAR MENU ITEMS -->
            
             <!-- /.navbar-collapse -->
