@@ -24,13 +24,6 @@ class Database
       // return $this->connection;
      }
 
- }
-
-$database = new Database();
-//$database->open_db_connection();
-
-
-
 
 public function query($sql)
  {
@@ -52,5 +45,15 @@ public function query($sql)
    { 
       return mysqli_real_escape_string($this->connection, $string);
    }
+
+
+ }
+
+$database = new Database();
+//$database->open_db_connection();
+
+
+
+
 
 ?>
