@@ -37,7 +37,7 @@ public function query($sql)
   {
      if(!$result)
  	 {
- 	 	die("Query failed : " . mysqli_error($this->connection));
+ 	 	die("Query failed : " . $this->connection->connect_errno);
  	 }
   }
 
