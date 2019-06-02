@@ -7,8 +7,7 @@ class Database
 
     public $connection;
 
-
-    function __contruct()
+    function __construct()
      {
      	$this->open_db_connection();
      } 
@@ -22,7 +21,7 @@ class Database
         {
   	        die("Connection failed " . mysqli_error());
         }
-
+      // return $this->connection;
      }
 
  }
