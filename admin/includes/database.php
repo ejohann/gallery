@@ -5,7 +5,13 @@ require_once("new_config.php");
 class Database
  {
 
-    public $connection; 
+    public $connection;
+
+
+    function __contruct()
+     {
+     	$this->open_db_connection();
+     } 
 
     public function open_db_connection()
      {
@@ -22,7 +28,7 @@ class Database
  }
 
 $database = new Database();
-$database->open_db_connection();
+//$database->open_db_connection();
 
 
 ?>
