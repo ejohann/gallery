@@ -36,12 +36,18 @@ public function query($sql)
  {
 
  	$result = mysqli_query($connection, $sql);
- 	if(!$result)
+ 	
+    confirm_query($result);
+ 	 return $result;
+ }
+
+ private function confirm_query($result)
+  {
+     if(!$result)
  	 {
  	 	die("Query failed : " . mysqli_error($connection));
  	 }
 
- 	 return $result;
- }
+  }
 
 ?>
