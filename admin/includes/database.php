@@ -27,7 +27,7 @@ class Database
 
 public function query($sql)
  {
- 	$result = mysqli_query($this->connection, $sql);	
+ 	$result = $this->connection->query($sql);	
     $this->confirm_query($result);
  	return $result;
  }
@@ -43,7 +43,7 @@ public function query($sql)
 
   public function escape($string)
    { 
-      return mysqli_real_escape_string($this->connection, $string);
+      return $this->connection->real_escape_string($string);
    }
 
 
