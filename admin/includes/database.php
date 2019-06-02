@@ -30,4 +30,18 @@ $database = new Database();
 //$database->open_db_connection();
 
 
+
+
+public function query($sql)
+ {
+
+ 	$result = mysqli_query($connection, $sql);
+ 	if(!$result)
+ 	 {
+ 	 	die("Query failed : " . mysqli_error($connection));
+ 	 }
+
+ 	 return $result;
+ }
+
 ?>
