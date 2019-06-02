@@ -9,16 +9,23 @@
                         </h1>
 
                         <?php
-                         if($database->connection)
-                          {
+                         
+                         $sql = "SELECT * FROM users WHERE id=1";
 
+                         $result = $database->query($sql);
+
+                         $user_details = mysqli_fetch_array($result);
+
+                         echo $user_details['username'];
+
+                         /*if($database->connection)
+                          {
                             echo "We are connected";
                           }
                           else
                           {
-
                             echo "We are NOT connected";
-                          }
+                          } */
 
                          ?>
 
