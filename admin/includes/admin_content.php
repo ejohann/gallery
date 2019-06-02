@@ -14,9 +14,9 @@
 
                          $result = $database->query($sql);
 
-                         $user_details = mysqli_fetch_array($result);
+                         $user_details = $result->fetch_array();
 
-                         echo $user_details['username'];
+                        echo $user_details['username'];
 
                          /*if($database->connection)
                           {
