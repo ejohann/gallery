@@ -34,20 +34,23 @@ $database = new Database();
 
 public function query($sql)
  {
-
- 	$result = mysqli_query($connection, $sql);
- 	
+ 	$result = mysqli_query($this->connection, $sql);	
     confirm_query($result);
- 	 return $result;
+ 	return $result;
  }
+
 
  private function confirm_query($result)
   {
      if(!$result)
  	 {
- 	 	die("Query failed : " . mysqli_error($connection));
+ 	 	die("Query failed : " . mysqli_error($this->connection));
  	 }
-
   }
+
+  public function escape($string)
+   { 
+      return mysqli_real_escape_string($this->connection, $string);
+   }
 
 ?>
