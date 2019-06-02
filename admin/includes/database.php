@@ -46,6 +46,10 @@ public function query($sql)
       return $this->connection->real_escape_string($string);
    }
 
+  public function the_insert_id()
+   { 
+      return $this->connection->insert_id;
+   }
 
  }
 
