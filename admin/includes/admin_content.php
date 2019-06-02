@@ -9,7 +9,7 @@
                         </h1>
 
                         <?php
-                         if($database)
+                         if($database->connection)
                           {
 
                             echo "We are connected";
