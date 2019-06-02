@@ -17,9 +17,9 @@ class Database
 
      //	$this->connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $this->connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        if(mysqli_connect_errno())
+        if($this->connection->connect_errno)
         {
-  	        die("Connection failed " . mysqli_error());
+  	        die("Connection failed " . $this->connection->connect_errno);
         }
       // return $this->connection;
      }
