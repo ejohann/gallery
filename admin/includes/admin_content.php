@@ -14,8 +14,9 @@
                           $id =1;
                           $find_user = User::find_user_by_id($id);
                           $user_details = $find_user->fetch_array();
+                          
+                          $user = User::instantiation($user_details);
 
-                        
                           
 
                            echo $user->username;
