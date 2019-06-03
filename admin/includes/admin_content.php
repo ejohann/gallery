@@ -10,42 +10,11 @@
 
                         <?php
                          
-                         // $user = new User();
                           $id =1;
-                          $find_user = User::find_user_by_id($id);
-                          $user_details = $find_user->fetch_array();
-                          
-                          $user = User::instantiation($user_details);
-
-                          
-
+                          $user = User::find_user_by_id($id);
+                      
                            echo $user->username;
-                        //  while($row = $all_users->fetch_array())
-                          //   {
-
-                             //   echo $row['username'];
-                            // }
-
-
-
-                        // $sql = "SELECT * FROM users WHERE id=1";
-
-                        // $result = $database->query($sql);
-
-
-                       //  $user_details = $result->fetch_array();
-
-                       // echo $user_details['username'];
-
-                         /*if($database->connection)
-                          {
-                            echo "We are connected";
-                          }
-                          else
-                          {
-                            echo "We are NOT connected";
-                          } */
-
+                    
                          ?>
 
                         <ol class="breadcrumb">
