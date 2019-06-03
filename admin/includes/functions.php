@@ -1,5 +1,6 @@
 <?php 
 
+
   function class_auto_loader($class)
    {
      $class = strtolower($class);
