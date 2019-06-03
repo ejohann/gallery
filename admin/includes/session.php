@@ -13,6 +13,7 @@ class Session
  	  {
 
  	  	session_start();
+ 	  	$this->check_the_login();
  	  }
 
 
