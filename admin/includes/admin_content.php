@@ -9,12 +9,22 @@
                         </h1>
 
                         <?php
-                         
-                          $id =1;
-                          $user = User::find_user_by_id($id);
-                      
-                           echo $user->username;
-                    
+                          $this_user = User::find_user_by_id(2);
+                           foreach($this_user as $user)
+                           {
+                              echo $user->username;
+                            } 
+
+                            
+                          $users = User::find_all_users();
+                        
+                         foreach($users as $user)
+                           {
+                              echo $user->username;
+                            } 
+
+
+                           
                          ?>
 
                         <ol class="breadcrumb">
