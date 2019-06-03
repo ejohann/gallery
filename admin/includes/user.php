@@ -35,14 +35,14 @@
 
     public static function instantiation($user_details)
      {
-        $new_object = new self; 
-
-        $new_object->id = $user_details['id'];
-        $new_object->username = $user_details['username'];
-        $new_object->password = $user_details['password'];
-        $new_object->user_firstname = $user_details['user_firstname'];
-        $new_object->user_lastname = $user_details['user_lastname'];
-
+       $new_object = new self; 
+       foreach($user_details as $the_attribute => $value)
+       	 {
+             if($new_object->has_the_attribute($the_attribute))
+              {
+              	$new_object->$the_attribute = $value; 
+              }
+         }
         return $new_object;
 
      }
