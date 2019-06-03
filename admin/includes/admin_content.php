@@ -11,8 +11,8 @@
                         <?php
                          
                          // $user = new User();
-
-                          $all_users = User::find_all_users();
+                          $id =1;
+                          $all_users = User::find_user_by_id($id);
 
                           while($row = $all_users->fetch_array())
                              {
