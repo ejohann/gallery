@@ -5,7 +5,7 @@
  
  if(!$session->is_signed_in())
   {
-    header("Location: login.php");
+    redirect("login.php");
   }
 
 ?>
