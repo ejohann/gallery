@@ -15,13 +15,7 @@
                           $find_user = User::find_user_by_id($id);
                           $user_details = $find_user->fetch_array();
 
-                          $user = new User(); 
-
-                          $user->id = $user_details['id'];
-                          $user->username = $user_details['username'];
-                          $user->password = $user_details['password'];
-                          $user->user_firstname = $user_details['user_firstname'];
-                          $user->user_lastname = $user_details['user_lastname'];
+                        
                           
 
                            echo $user->username;
