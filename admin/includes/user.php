@@ -12,6 +12,14 @@
     }
   
 
+public static function find_user_by_id($user_id)
+    {
+      global $database;
+      $result_set = $database->query("SELECT * FROM users WHERE id={$user_id}");
+      return $result_set;
+    }
+  
+
   }
 
 
