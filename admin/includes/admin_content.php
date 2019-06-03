@@ -12,13 +12,24 @@
                          
                          // $user = new User();
                           $id =1;
-                          $all_users = User::find_user_by_id($id);
+                          $find_user = User::find_user_by_id($id);
+                          $user_details = $find_user->fetch_array();
 
-                          while($row = $all_users->fetch_array())
-                             {
+                          $user = new User(); 
 
-                                echo $row['username'];
-                             }
+                          $user->id = $user_details['id'];
+                          $user->username = $user_details['username'];
+                          $user->password = $user_details['password'];
+                          $user->user_firstname = $user_details['user_firstname'];
+                          $user->user_lastname = $user_details['user_lastname'];
+                          
+
+                           echo $user->username;
+                        //  while($row = $all_users->fetch_array())
+                          //   {
+
+                             //   echo $row['username'];
+                            // }
 
 
 
