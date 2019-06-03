@@ -6,6 +6,9 @@
 class Session
  {
 
+ 	private $signed_in;
+ 	public $user_id;
+
  	function __construct()
  	  {
 
