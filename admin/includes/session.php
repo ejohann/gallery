@@ -27,10 +27,17 @@ class Session
  	 	 else
  	 	  {
              unset($this->user_id);
-             $this->signed_on = false;
+             $this->signed_in = false;
 
  	 	  }
  	 }
+
+    public function is_signed_in()
+      {
+
+      	 return $this->signed_in;
+      }
+
  }
 
 
