@@ -10,10 +10,10 @@
 
                         <?php
                           $this_user = User::find_user_by_id(2);
-                           foreach($this_user as $user)
-                           {
-                              echo $user->username;
-                            } 
+                         // foreach($this_user as $user)
+                          // {
+                              echo $this_user->username;
+                           // } 
 
                             
                           $users = User::find_all_users();
