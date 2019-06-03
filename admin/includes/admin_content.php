@@ -10,13 +10,26 @@
 
                         <?php
                          
-                         $sql = "SELECT * FROM users WHERE id=1";
+                          $user = new User();
 
-                         $result = $database->query($sql);
+                          $all_users = $user->find_all_users();
 
-                         $user_details = $result->fetch_array();
+                          while($row = $all_users->fetch_array())
+                             {
 
-                        echo $user_details['username'];
+                                echo $row['username'];
+                             }
+
+
+
+                        // $sql = "SELECT * FROM users WHERE id=1";
+
+                        // $result = $database->query($sql);
+
+
+                       //  $user_details = $result->fetch_array();
+
+                       // echo $user_details['username'];
 
                          /*if($database->connection)
                           {
