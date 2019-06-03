@@ -4,15 +4,11 @@
    {
      $class = strtolower($class);
      $the_path = "includes/{$class}.php";
-     if(file_exists($the_path))
+      
+     if(is_file($the_path) && !class_exists($class))
       {
       	require_once($the_path);
       }
-     else
-      {
-      	die("This file was {$class}.php was not found");
-      }
-
    }
 
  spl_autoload_register('class_auto_loader');
