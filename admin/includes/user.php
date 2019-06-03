@@ -13,16 +13,16 @@
    public static function find_all_users()
     {
      //  global $database;
-      $result_set = self::run_this_query("SELECT * FROM users");
-      return $result_set;
+      return self::run_this_query("SELECT * FROM users");
+     // return $result_set;
     }
   
 
    public static function find_user_by_id($user_id)
     {
       // global $database;
-      $result_set = self::run_this_query("SELECT * FROM users WHERE id={$user_id}");
-      return $result_set;
+      return self::run_this_query("SELECT * FROM users WHERE id={$user_id}");
+     // return $result_set;
     }
   
 
@@ -30,13 +30,14 @@
    public static function run_this_query($sql)
     {  
       global $database;
+
       $result_set = $database->query($sql);
 
       $the_object_array = array();
 
       while($row = $result_set->fetch_array())
        {
-       	 $the_object_array = self::instantiation($row);
+       	 $the_object_array[] = self::instantiation($row);
        }
       return $the_object_array;
     }
