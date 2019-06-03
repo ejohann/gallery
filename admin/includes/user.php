@@ -21,8 +21,10 @@
    public static function find_user_by_id($user_id)
     {
       // global $database;
-      return self::run_this_query("SELECT * FROM users WHERE id={$user_id}");
-     // return $result_set;
+      $result_array = self::run_this_query("SELECT * FROM users WHERE id={$user_id}");
+
+      return !empty($result_array) ? array_shift($result_array) : false;
+
     }
   
 
