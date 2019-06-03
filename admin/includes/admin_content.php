@@ -10,9 +10,9 @@
 
                         <?php
                          
-                          $user = new User();
+                         // $user = new User();
 
-                          $all_users = $user->find_all_users();
+                          $all_users = User::find_all_users();
 
                           while($row = $all_users->fetch_array())
                              {
