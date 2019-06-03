@@ -26,13 +26,23 @@
     }
   
 
+    // runs any query and returns an object array
    public static function run_this_query($sql)
     {  
       global $database;
       $result_set = $database->query($sql);
-      return $result_set;
+
+      $the_object_array = array();
+
+      while($row = $result_set->fetch_array())
+       {
+       	 $the_object_array = self::instantiation($row);
+       }
+      return $the_object_array;
     }
 
+        
+     // makes an object from db result
     public static function instantiation($user_details)
      {
        $new_object = new self; 
@@ -47,11 +57,11 @@
 
      }
 
-
+     // check if an attribute exists in an object
      private function has_the_attribute($attribute)
       {
         $object_properties = get_object_vars($this);
-        return array_key_exists($attribute, $oject_properties);
+        return array_key_exists($attribute, $object_properties);
       }
 
   }
