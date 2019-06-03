@@ -47,6 +47,13 @@
 
      }
 
+
+     private function has_the_attribute($attribute)
+      {
+        $object_properties = get_object_vars($this);
+        return array_key_exists($attribute, $oject_properties);
+      }
+
   }
 
 
