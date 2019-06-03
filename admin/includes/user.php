@@ -12,8 +12,8 @@
 
    public static function find_all_users()
     {
-      global $database;
-      $result_set = $database->query("SELECT * FROM users");
+     //  global $database;
+      $result_set = self::run_this_query("SELECT * FROM users");
       return $result_set;
     }
   
