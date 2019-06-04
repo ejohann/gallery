@@ -83,6 +83,29 @@
         return array_key_exists($attribute, $object_properties);
       }
 
+
+    public function create()
+     {
+         global $database;
+         $username = escape($this->username);
+         $password = escape($this->password);
+         $user_firstname = escape($this->user_firstname);
+         $user_lastname = escape($this->user_lastname);
+ 
+         $insert_user = "INSERT INTO users (username, password, user_firstname, user_lastname) VALUES ('{$username}', '{$password}', '{$user_firstname}', '{$user_lastname}' )";
+          
+          if($database->query($insert_user))
+            {
+               $this->id = $database->the_insert_id();
+               return true;
+            }
+          else
+            {
+              return false;
+            }
+ 
+     }
+
   }
 
 
