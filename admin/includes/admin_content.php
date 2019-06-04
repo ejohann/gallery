@@ -11,9 +11,9 @@
                         <?php
                           $this_user = User::find_user_by_id(2);
                           
-                          $this_user->user_lastname = "Jones";
+                         // $this_user->user_lastname = "Jones";
 
-                          $this_user->update();
+                          $this_user->delete();
                         
                       /*    $users = User::find_all_users();
                         
