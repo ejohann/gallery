@@ -9,21 +9,25 @@
                         </h1>
 
                         <?php
-                          $this_user = User::find_user_by_id(2);
-                         // foreach($this_user as $user)
-                          // {
-                              echo $this_user->username;
-                           // } 
-
-                            
+                        /*  $this_user = User::find_user_by_id(2);
+                          echo $this_user->username;
+                        
                           $users = User::find_all_users();
                         
-                         foreach($users as $user)
+                          foreach($users as $user)
                            {
                               echo $user->username;
-                            } 
+                           } 
+                              */
+                          
+                          $user = new User();
 
+                          $user->username = "Jazy";
+                          $user->password = "password";
+                          $user->user_firstname = "Jazzy";
+                          $user->user_lastname = "Jeff";
 
+                          $user->create();
                            
                          ?>
 
