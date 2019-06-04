@@ -9,16 +9,19 @@
                         </h1>
 
                         <?php
-                        /*  $this_user = User::find_user_by_id(2);
-                          echo $this_user->username;
+                          $this_user = User::find_user_by_id(2);
+                          
+                          $this_user->user_lastname = "Jones";
+
+                          $this_user->update();
                         
-                          $users = User::find_all_users();
+                      /*    $users = User::find_all_users();
                         
                           foreach($users as $user)
                            {
                               echo $user->username;
                            } 
-                              */
+                              
                           
                           $user = new User();
 
@@ -28,7 +31,7 @@
                           $user->user_lastname = "Jeff";
 
                           $user->create();
-                           
+                           */
                          ?>
 
                         <ol class="breadcrumb">
