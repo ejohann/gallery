@@ -103,7 +103,23 @@
             {
               return false;
             }
+     }
+
+    public function update()
+     {
+         global $database;
+         $username = $database->escape($this->username);
+         $password = $database->escape($this->password);
+         $user_firstname = $database->escape($this->user_firstname);
+         $user_lastname = $database->escape($this->user_lastname);
+         $user_id = $database->escape($this->id);
  
+         $update_user = "UPDATE users SET username = '{$username}', password = '{$password}', user_firstname = '{$user_firstname}', user_lastname = {$user_lastname}' WHERE id = $user_id ";
+          
+        $database->query($update_user);
+
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+           
      }
 
   }
