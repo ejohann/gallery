@@ -22,7 +22,7 @@
                           
                           $user = new User();
 
-                          $user->username = "Jazy";
+                          $user->username = "Jazzy";
                           $user->password = "password";
                           $user->user_firstname = "Jazzy";
                           $user->user_lastname = "Jeff";
