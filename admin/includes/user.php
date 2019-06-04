@@ -44,6 +44,22 @@
       return $the_object_array;
     }
 
+
+    //method to verify a user
+    public static function verify_user($username, $password)
+     {
+       global $database;
+
+       $username = $database->escape($username);
+       $password = $database->escape($password);
+
+       $select_user = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' LIMIT 1";
+       $result_array = self::run_this_query($select_user);
+
+       return !empty($result_array) ? array_shift($result_array) : false;
+      
+     }
+     
         
      // makes an object from db result
     public static function instantiation($user_details)
