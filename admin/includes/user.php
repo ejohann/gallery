@@ -87,10 +87,10 @@
     public function create()
      {
          global $database;
-         $username = escape($this->username);
-         $password = escape($this->password);
-         $user_firstname = escape($this->user_firstname);
-         $user_lastname = escape($this->user_lastname);
+         $username = $database->escape($this->username);
+         $password = $database->escape($this->password);
+         $user_firstname = $database->escape($this->user_firstname);
+         $user_lastname = $database->escape($this->user_lastname);
  
          $insert_user = "INSERT INTO users (username, password, user_firstname, user_lastname) VALUES ('{$username}', '{$password}', '{$user_firstname}', '{$user_lastname}' )";
           
