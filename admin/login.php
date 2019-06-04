@@ -5,7 +5,7 @@
 
   if($session->is_signed_in())
    {
- 	  redirect("../index.php");
+ 	  redirect("./index.php");
    }
 
   if(isset($_POST['login']))
