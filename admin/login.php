@@ -5,7 +5,7 @@
 
   if($session->is_signed_in())
    {
- 	 // redirect("./index.php");
+ 	   redirect("./index.php");
    }
    $the_message = '';
 
@@ -19,7 +19,7 @@
      if($user_found)
       {
       	$session->login($user_found);
-      	redirect("../index.php");
+      	redirect("./index.php");
       }
       else
        {
