@@ -5,8 +5,9 @@
 
   if($session->is_signed_in())
    {
- 	  redirect("./index.php");
+ 	 // redirect("./index.php");
    }
+   $the_message = '';
 
   if(isset($_POST['login']))
    {
