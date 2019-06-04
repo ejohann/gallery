@@ -8,6 +8,7 @@ class Session
 
  	private $signed_in = false;
  	public $user_id;
+ 	public $message;
 
  	function __construct()
  	  {
@@ -53,6 +54,18 @@ class Session
       	unset($_SESSION['user_id']);
       	unset($this->user_id);
       	$this->signed_in = false;
+      }
+
+    public function message($msg="")
+      {
+        if(!empty($msg))
+         {
+         	$_SESSION['message'] = $msg;
+         }
+        else
+         {
+         	return $this->message;
+         }
       }
 
 
