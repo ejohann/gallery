@@ -68,6 +68,20 @@ class Session
          }
       }
 
+    public function check_message()
+      {
+        if(isset($_SESSION['message']))
+         {
+         	$this->message = $_SESSION['message'];
+         	unset($_SESSION['message']);
+         }
+        else
+         {
+         	$this->message = "";
+         }
+
+      }
+
 
  }
 
