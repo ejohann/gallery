@@ -118,8 +118,16 @@
           
         $database->query($update_user);
 
-        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
-           
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;   
+     }
+
+    public function delete()
+     {
+       global $database;
+       $user_id = $database->escape($this->id);
+       $delete_user = "DELETE FROM users WHERE id = $user_id";
+       
+       return ($database->query($delete_user)) ? true : false ;
      }
 
   }
