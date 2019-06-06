@@ -145,7 +145,7 @@
          $user_id = $database->escape($this->id); */
 
          $update_user = "UPDATE " .self::$db_table. " SET ";
-         $update_user .= .implode(",",  $properties_pairs);
+         $update_user .= implode(",",  $properties_pairs);
          $update_user .= " WHERE id = " .$database->escape($this->id). "";
           
         $database->query($update_user);
