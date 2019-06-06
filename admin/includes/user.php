@@ -13,7 +13,7 @@
    public static function find_all_users()
     {
      //  global $database;
-      return self::run_this_query("SELECT * FROM users");
+      return self::run_this_query("SELECT * FROM " .self::$db_table. "");
      // return $result_set;
     }
   
