@@ -3,7 +3,7 @@
  class User
   {
     
-
+    protected static $db_table = "users";
     public $id;
     public $username;
     public $password;
