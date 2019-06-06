@@ -111,11 +111,6 @@
      {
          global $database;
          $properties = $this->properties();
-       /*  $username = $database->escape($this->username);
-         $password = $database->escape($this->password);
-         $user_firstname = $database->escape($this->user_firstname);
-         $user_lastname = $database->escape($this->user_lastname); */
- 
          $insert_user = "INSERT INTO " .self::$db_table. " (" .implode(",", array_keys($properties)). ") ";
          $insert_user .= "VALUES ('". implode("','", array_values($properties)) ."')";
           
