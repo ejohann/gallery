@@ -28,29 +28,7 @@
       
      }
      
-        
-     // makes an object from db result
-    public static function instantiation($user_details)
-     {
-       $new_object = new self; 
-       foreach($user_details as $the_attribute => $value)
-       	 {
-             if($new_object->has_the_attribute($the_attribute))
-              {
-              	$new_object->$the_attribute = $value; 
-              }
-         }
-        return $new_object;
-
-     }
-
-     // check if an attribute exists in an object
-     private function has_the_attribute($attribute)
-      {
-        $object_properties = get_object_vars($this);
-        return array_key_exists($attribute, $object_properties);
-      }
-
+    
     
     protected function properties() 
      {
