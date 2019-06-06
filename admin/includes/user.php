@@ -102,6 +102,18 @@
      }
 
 
+    protected function clean_properties()
+     {
+       global $database;
+       $clean_properties = array();
+
+       foreach($this->properties() as $key => $value)
+        {
+           $clean_properties[$key] = $database->escape($value);
+        }
+       return $clean_properties;
+     }
+
     public function save()
      {
        return isset($this->id) ? $this->update() : $this->create();
