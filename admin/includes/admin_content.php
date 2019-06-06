@@ -29,10 +29,10 @@
                           */
                           $user = new User();
 
-                          $user->username = "India";
+                          $user->username = "Indiana";
                           $user->password = "password";
                           $user->user_firstname = "India";
-                          $user->user_lastname = "Arie";
+                          $user->user_lastname = "Ariana";
 
                           $user->save();
                            
