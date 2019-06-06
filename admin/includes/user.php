@@ -137,13 +137,6 @@
              $properties_pairs[] = "{$key}='{$value}'";
            }
  
-        /*
-         $username = $database->escape($this->username);
-         $password = $database->escape($this->password);
-         $user_firstname = $database->escape($this->user_firstname);
-         $user_lastname = $database->escape($this->user_lastname);
-         $user_id = $database->escape($this->id); */
-
          $update_user = "UPDATE " .self::$db_table. " SET ";
          $update_user .= implode(",",  $properties_pairs);
          $update_user .= " WHERE id = " .$database->escape($this->id). "";
