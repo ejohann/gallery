@@ -104,7 +104,8 @@
          $user_firstname = $database->escape($this->user_firstname);
          $user_lastname = $database->escape($this->user_lastname);
  
-         $insert_user = "INSERT INTO " .self::$db_table. " (" .implode(",", array_keys($properties)). ") VALUES ('{$username}', '{$password}', '{$user_firstname}', '{$user_lastname}' )";
+         $insert_user = "INSERT INTO " .self::$db_table. " (" .implode(",", array_keys($properties)). ") ";
+         $insert_user .= "VALUES ('". implode("','", array_values($properties)) ."')";
           
           if($database->query($insert_user))
             {
