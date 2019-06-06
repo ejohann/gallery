@@ -110,8 +110,8 @@
     public function create()
      {
          global $database;
-        /* $properties = $this->properties();
-         $username = $database->escape($this->username);
+         $properties = $this->properties();
+       /*  $username = $database->escape($this->username);
          $password = $database->escape($this->password);
          $user_firstname = $database->escape($this->user_firstname);
          $user_lastname = $database->escape($this->user_lastname); */
