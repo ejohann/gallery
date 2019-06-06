@@ -130,7 +130,7 @@
      {
        global $database;
        $user_id = $database->escape($this->id);
-       $delete_user = "DELETE FROM users WHERE id = $user_id";
+       $delete_user = "DELETE FROM " .self::$db_table. " WHERE id = $user_id";
        
        return ($database->query($delete_user)) ? true : false ;
      }
