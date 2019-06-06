@@ -83,6 +83,12 @@
         return array_key_exists($attribute, $object_properties);
       }
 
+    
+    protected function properties() 
+     {
+      return get_object_vars($this);
+     }
+
 
     public function save()
      {
