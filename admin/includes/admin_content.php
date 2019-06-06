@@ -10,14 +10,15 @@
 
                         <?php
                       
-                          /*  $this_user = User::find_user_by_id(4);
+                          $this_user = User::find_user_by_id(4);
                           
-                         $this_user->username = "Jayz";
-                         $this_user->user_firstname = "JiggaWho";
+                         $this_user->username = "Jay-z";
+                         $this_user->user_firstname = "JIGGA";
 
 
 
                           $this_user->save();
+                          /*
                        
                           $users = User::find_all_users();
                         
@@ -25,7 +26,7 @@
                            {
                               echo $user->username;
                            } 
-                            */  
+                              
                          
                           $user = new User();
 
@@ -35,7 +36,7 @@
                           $user->user_lastname = "Smith";
 
                           $user->save();
-                            
+                            */
                          ?>
 
                         <ol class="breadcrumb">
