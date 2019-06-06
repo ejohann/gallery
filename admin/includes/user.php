@@ -11,7 +11,7 @@
     public $user_firstname;
     public $user_lastname;
 
-   public static function find_all_users()
+   public static function find_all()
     {
      //  global $database;
       return self::run_this_query("SELECT * FROM " .self::$db_table. "");
