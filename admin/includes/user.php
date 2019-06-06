@@ -53,7 +53,7 @@
        $username = $database->escape($username);
        $password = $database->escape($password);
 
-       $select_user = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' LIMIT 1";
+       $select_user = "SELECT * FROM " .self::$db_table. " WHERE username = '{$username}' AND password = '{$password}' LIMIT 1";
        $result_array = self::run_this_query($select_user);
 
        return !empty($result_array) ? array_shift($result_array) : false;
