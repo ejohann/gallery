@@ -10,7 +10,7 @@
 
                         <?php
                       
-                           $this_user = User::find_user_by_id(4);
+                          /*  $this_user = User::find_user_by_id(4);
                           
                          $this_user->username = "Jayz";
                          $this_user->user_firstname = "JiggaWho";
@@ -18,24 +18,24 @@
 
 
                           $this_user->save();
-                        /*
+                       
                           $users = User::find_all_users();
                         
                           foreach($users as $user)
                            {
                               echo $user->username;
                            } 
-                              
+                            */  
                          
                           $user = new User();
 
-                          $user->username = "Indiana";
+                          $user->username = "IndianaJ";
                           $user->password = "password";
-                          $user->user_firstname = "India";
-                          $user->user_lastname = "Ariana";
+                          $user->user_firstname = "Indiana";
+                          $user->user_lastname = "Jones";
 
                           $user->save();
-                            */
+                            
                          ?>
 
                         <ol class="breadcrumb">
