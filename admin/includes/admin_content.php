@@ -12,8 +12,8 @@
                       
                           $this_user = User::find_user_by_id(4);
                           
-                         $this_user->username = "Jay-z";
-                         $this_user->user_firstname = "JIGGA";
+                         $this_user->username = "Jay";
+                         $this_user->user_firstname = "JIGGA_WHO";
 
 
 
