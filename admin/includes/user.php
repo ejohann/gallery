@@ -19,10 +19,11 @@
     }
   
 
-   public static function find_user_by_id($user_id)
+   public static function find_by_id($id)
     {
       // global $database;
-      $result_array = self::run_this_query("SELECT * FROM " .self::$db_table. " WHERE id={$user_id}");
+      $id = $database->escape($id);
+      $result_array = self::run_this_query("SELECT * FROM " .self::$db_table. " WHERE id={$id}");
 
       return !empty($result_array) ? array_shift($result_array) : false;
 
