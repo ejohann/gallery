@@ -11,24 +11,7 @@
     public $user_firstname;
     public $user_lastname;
 
-   public static function find_all()
-    {
-     //  global $database;
-      return self::run_this_query("SELECT * FROM " .self::$db_table. "");
-     // return $result_set;
-    }
-  
-
-   public static function find_by_id($id)
-    {
-      global $database;
-      $id = $database->escape($id);
-      $result_array = self::run_this_query("SELECT * FROM " .self::$db_table. " WHERE id={$id}");
-
-      return !empty($result_array) ? array_shift($result_array) : false;
-
-    }
-  
+    
 
     // runs any query and returns an object array
    public static function run_this_query($sql)
