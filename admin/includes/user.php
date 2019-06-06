@@ -119,7 +119,7 @@
          $user_lastname = $database->escape($this->user_lastname);
          $user_id = $database->escape($this->id);
  
-         $update_user = "UPDATE users SET username = '$username', password = '$password', user_firstname = '$user_firstname', user_lastname = '$user_lastname' WHERE id = $user_id ";
+         $update_user = "UPDATE " .self::$db_table. " SET username = '$username', password = '$password', user_firstname = '$user_firstname', user_lastname = '$user_lastname' WHERE id = $user_id ";
           
         $database->query($update_user);
 
