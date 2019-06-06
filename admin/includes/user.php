@@ -94,7 +94,7 @@
        {
            if($this->has_the_attribute($db_field))
              {
-                $properties[$db_field] = $this->db_field;
+                $properties[$db_field] = $this->$db_field;
              }
 
        }
