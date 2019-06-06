@@ -21,7 +21,7 @@
 
    public static function find_by_id($id)
     {
-      // global $database;
+      global $database;
       $id = $database->escape($id);
       $result_array = self::run_this_query("SELECT * FROM " .self::$db_table. " WHERE id={$id}");
 
