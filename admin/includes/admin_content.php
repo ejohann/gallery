@@ -9,7 +9,8 @@
                         </h1>
 
                         <?php
-                          $this_user = User::find_user_by_id(4);
+                      
+                          /* $this_user = User::find_user_by_id(4);
                           
                          $this_user->username = "Jayz";
                          $this_user->user_firstname = "Jigga";
@@ -18,23 +19,23 @@
 
                           $this_user->save();
                         
-                      /*    $users = User::find_all_users();
+                          $users = User::find_all_users();
                         
                           foreach($users as $user)
                            {
                               echo $user->username;
                            } 
                               
-                          
+                          */
                           $user = new User();
 
-                          $user->username = "Jazzy";
+                          $user->username = "India";
                           $user->password = "password";
-                          $user->user_firstname = "Jazzy";
-                          $user->user_lastname = "Jeff";
+                          $user->user_firstname = "India";
+                          $user->user_lastname = "Arie";
 
-                          $user->create();
-                           */
+                          $user->save();
+                           
                          ?>
 
                         <ol class="breadcrumb">
