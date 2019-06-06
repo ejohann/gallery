@@ -10,10 +10,10 @@
 
                         <?php
                       
-                          $this_user = User::find_user_by_id(4);
+                          $this_user = User::find_by_id(4);
                           
                          $this_user->username = "Jay";
-                         $this_user->user_firstname = "JIGGA_WHO";
+                         $this_user->user_firstname = "JIGGAWHO";
 
 
 
