@@ -97,7 +97,7 @@
          $user_firstname = $database->escape($this->user_firstname);
          $user_lastname = $database->escape($this->user_lastname);
  
-         $insert_user = "INSERT INTO users (username, password, user_firstname, user_lastname) VALUES ('{$username}', '{$password}', '{$user_firstname}', '{$user_lastname}' )";
+         $insert_user = "INSERT INTO " .self::$db_table. " (username, password, user_firstname, user_lastname) VALUES ('{$username}', '{$password}', '{$user_firstname}', '{$user_lastname}' )";
           
           if($database->query($insert_user))
             {
