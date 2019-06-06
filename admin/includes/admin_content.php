@@ -9,11 +9,14 @@
                         </h1>
 
                         <?php
-                          $this_user = User::find_user_by_id(2);
+                          $this_user = User::find_user_by_id(4);
                           
-                         // $this_user->user_lastname = "Jones";
+                         $this_user->username = "Jayz";
+                         $this_user->user_firstname = "Jigga";
 
-                          $this_user->delete();
+
+
+                          $this_user->save();
                         
                       /*    $users = User::find_all_users();
                         
