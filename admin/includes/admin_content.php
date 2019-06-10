@@ -19,25 +19,25 @@
 
                           $this_user->save();
                         
-                        */
+                     
                           $photos = Photo::find_all();
                         
                           foreach($photos as $photo)
                            {
                               echo $photo->photo_title;
                            } 
-                           
+                              */
                               
-                           /*
-                          $user = new User();
+                           
+                          $photo = new Photo();
 
-                          $user->username = "Williams";
-                          $user->password = "password";
-                          $user->user_firstname = "William";
-                          $user->user_lastname = "Smith";
+                          $photo->photo_title = "marigold";
+                          $photo->photo_description = "French Margiold";
+                          $photo->photo_filename = "marigold.png";
+                          $photo->photo_size = 6;
 
-                          $user->save();
-                           */
+                          $photo->save();
+                          /* */
                          ?>
 
                         <ol class="breadcrumb">
