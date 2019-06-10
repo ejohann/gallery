@@ -62,7 +62,7 @@
          	 {
          	 	return false;
          	 }
-         	if(empty($this->photo->filename) || empty($this->tmp_path))
+         	if(empty($this->photo_filename) || empty($this->tmp_path))
          	 {
          	 	$this->custom_errors_array[] = "The file is not available";
          	 	return false;
