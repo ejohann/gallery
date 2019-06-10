@@ -42,20 +42,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   <?php  
-                                     $photos = Photo::find_all();
-                                     foreach($photos as $photo)
-                                      {  
-                                        $photo_destination = $photo->image_path();
-                                         echo "<tr>";
-                                         echo "<td><img width='100px' class='img-responsive' src='{$photo_destination}' /></td>";
-                                         echo "<td>{$photo->id}</td>";
-                                         echo "<td>{$photo->photo_filename}</td>";
-                                         echo "<td>{$photo->photo_title}</td>";
-                                         echo "<td>{$photo->photo_size}</td>";
-                                         echo "</tr>";
-                                      } 
-                                    ?>
+                                  
+                                    <?php $photos = Photo::find_all(); ?>
+                                    <?php foreach($photos as $photo): ?>
+                                        <tr>
+                                         <td><img width="100px" class="img-responsive" src="<?php echo $photo->image_path(); ?>"/>
+                                         </td>
+                                         <td><?php echo $photo->id; ?></td>
+                                         <td><?php echo $photo->photo_filename; ?></td>
+                                         <td><?php echo $photo->photo_title; ?></td>
+                                         <td><?php echo $photo->photo_size; ?></td>
+                                         </tr>
+                                      <?php endforeach;  ?>
+                                 
                                 </tbody>
                             </table>
                         </div>      
