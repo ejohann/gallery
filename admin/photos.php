@@ -42,13 +42,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                   <?php  
+                                     $photos = Photo::find_all();
+                                     foreach($photos as $photo)
+                                      {  
+                                        $photo_destination = $photo->upload_directory .DS. $photo->photo_filename;
+                                         echo "<tr>";
+                                         echo "<td><img src='{$photo_destination}' /></td>";
+                                         echo "<td>{$photo->id}</td>";
+                                         echo "<td>{$photo->photo_filename}</td>";
+                                         echo "<td>{$photo->photo_title}</td>";
+                                         echo "<td>{$photo->photo_size}</td>";
+                                         echo "</tr>";
+                                      } 
+                                    ?>
                                 </tbody>
                             </table>
                         </div>      
