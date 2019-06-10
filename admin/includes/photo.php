@@ -50,6 +50,46 @@
 
        }
 
+     public function save()
+      {
+        if($this->id)
+         {
+         	$this->update();
+         }
+        else
+         {
+         	if(!empty($this->custom_errors_array))
+         	 {
+         	 	return false;
+         	 }
+         	if(empty($this->photo->filename) || empty($this->tmp_path))
+         	 {
+         	 	$this->custom_errors_array[] = "The file is not available";
+         	 	return false;
+         	 }
+         	$target_path = SITE_ROOT.DS. 'admin' .DS. $this->upload_directory .DS. $this->photo_filename;
+         	if(file_exists($target_path))
+         	 {
+         	 	$this->custom_errors_array[] = "The file {$this->photo_filename} already exists";
+         	 	return false;
+         	 }
+         	if(move_uploaded_file($this->tmp_path, $target_path))
+         	 {
+         	 	if($this->create)
+         	 	 {
+         	 	 	unset($this->tmp_path);
+         	 	 	return true;
+         	 	 }
+         	 }
+         	else
+         	 {
+         	 	$this->custom_errors_array[] = "The file directory does not have permissions";
+         	 	return false;
+         	 }
+         	// $this->create();
+         }
+        
+      }
 
     } 
 
