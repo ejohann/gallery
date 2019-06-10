@@ -66,7 +66,7 @@
                            </div> 
                           
                           <div class="form-group">
-                             <a href=""><img width="100px" class="img-responsive" src="<?php echo $photo->image_path() ;?>" /></a>
+                             <a href=""><img width="100px" class="thumbnail" src="<?php echo $photo->image_path() ;?>" /></a>
                            </div> 
 
                            <div class="form-group">
