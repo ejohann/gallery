@@ -30,7 +30,25 @@
                         </h1>
 
                         <div class="col-md-12">
-                            
+                           
+                           <div class="form-group">
+                              <input type="text" name="title" class="form-control">
+                           </div> 
+
+                           <div class="form-group">
+                               <label for="caption">Caption</label>
+                              <input type="text" name="caption" class="form-control">
+                           </div> 
+
+                           <div class="form-group">
+                               <label for="alternate_text">Alternate Text</label>
+                               <input type="text" name="alternate_text" class="form-control">
+                           </div> 
+
+                               <div class="form-group">
+                               <label for="description">Description</label>
+                              <textarea type="text" name="description" id="" rows="10" cols="30" class="form-control"> </textarea>
+                           </div> 
                            
                         </div>      
                        
