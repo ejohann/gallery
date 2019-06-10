@@ -18,7 +18,7 @@
 
 
                           $this_user->save();
-                         */
+                        
                        
                           $users = User::find_all();
                         
@@ -26,17 +26,18 @@
                            {
                               echo $user->username;
                            } 
+                            */
                               
-                          /*
+                          
                           $user = new User();
 
-                          $user->username = "WillS";
+                          $user->username = "Williams";
                           $user->password = "password";
-                          $user->user_firstname = "Will";
+                          $user->user_firstname = "William";
                           $user->user_lastname = "Smith";
 
                           $user->save();
-                            */
+                          /*  */
                          ?>
 
                         <ol class="breadcrumb">
