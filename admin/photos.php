@@ -48,7 +48,7 @@
                                         <tr>
                                          <td><img width="100px" class="img-responsive" src="<?php echo $photo->image_path(); ?>"/>
                                             <div class="picture_link">
-                                                <a href="delete_photos.php?id=<?php echo $photo->id ?>">Delete</a>
+                                                <a href="delete_photo.php?id=<?php echo $photo->id ?>">Delete</a>
                                                 <a href="">Edit</a>
                                                 <a href="">View</a>
                                             </div>
