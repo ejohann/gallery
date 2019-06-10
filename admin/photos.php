@@ -46,6 +46,7 @@
                                      $photos = Photo::find_all();
                                      foreach($photos as $photo)
                                       {  
+                                        $photo_destination = $photo->image_path();
                                          echo "<tr>";
                                          echo "<td><img width='100px' class='img-responsive' src='{$photo_destination}' /></td>";
                                          echo "<td>{$photo->id}</td>";
