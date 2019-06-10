@@ -64,6 +64,10 @@
                            <div class="form-group">
                               <input type="text" name="title" value="<?php echo $photo->photo_title; ?>" class="form-control">
                            </div> 
+                          
+                          <div class="form-group">
+                             <a href=""><img width="100px" class="img-responsive" src="<?php echo $photo->image_path() ;?>" /></a>
+                           </div> 
 
                            <div class="form-group">
                                <label for="caption">Caption</label>
