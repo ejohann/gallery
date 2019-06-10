@@ -39,7 +39,8 @@ class Db_object
      // makes an object from db result
     public static function instantiation($user_details)
      {
-       $new_object = new self; 
+       $calling_class = get_called_class();
+       $new_object = new $calling_class; 
        foreach($user_details as $the_attribute => $value)
        	 {
              if($new_object->has_the_attribute($the_attribute))
