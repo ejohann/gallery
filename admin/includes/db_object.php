@@ -37,11 +37,11 @@ class Db_object
 
 
      // makes an object from db result
-    public static function instantiation($user_details)
+    public static function instantiation($object_details)
      {
        $calling_class = get_called_class();
        $new_object = new $calling_class; 
-       foreach($user_details as $the_attribute => $value)
+       foreach($object_details as $the_attribute => $value)
        	 {
              if($new_object->has_the_attribute($the_attribute))
               {
@@ -97,10 +97,10 @@ class Db_object
      {
          global $database;
          $properties = $this->clean_properties();
-         $insert_user = "INSERT INTO " .static::$db_table. " (" .implode(",", array_keys($properties)). ") ";
-         $insert_user .= "VALUES ('". implode("','", array_values($properties)) ."')";
+         $insert_record = "INSERT INTO " .static::$db_table. " (" .implode(",", array_keys($properties)). ") ";
+         $insert_record .= "VALUES ('". implode("','", array_values($properties)) ."')";
           
-          if($database->query($insert_user))
+          if($database->query($insert_record))
             {
                $this->id = $database->the_insert_id();
                return true;
@@ -123,11 +123,11 @@ class Db_object
              $properties_pairs[] = "{$key}='{$value}'";
            }
  
-         $update_user = "UPDATE " .static::$db_table. " SET ";
-         $update_user .= implode(",",  $properties_pairs);
-         $update_user .= " WHERE id = " .$database->escape($this->id). "";
+         $update_record = "UPDATE " .static::$db_table. " SET ";
+         $update_record .= implode(",",  $properties_pairs);
+         $update_record .= " WHERE id = " .$database->escape($this->id). "";
           
-        $database->query($update_user);
+        $database->query($update_record);
 
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;   
      }
@@ -135,10 +135,10 @@ class Db_object
     public function delete()
      {
        global $database;
-       $user_id = $database->escape($this->id);
-       $delete_user = "DELETE FROM " .static::$db_table. " WHERE id = $user_id";
+       $id = $database->escape($this->id);
+       $delete_record = "DELETE FROM " .static::$db_table. " WHERE id = $id";
        
-       return ($database->query($delete_user)) ? true : false ;
+       return ($database->query($delete_record)) ? true : false ;
      }
 
 
