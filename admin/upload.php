@@ -2,6 +2,14 @@
 
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
+<?php 
+   if(isset($_POST['submit']))
+    {
+      echo "It works";
+    }
+
+?>
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,9 +17,7 @@
 
 
            <!-- TOP MENU ITEM -->
-
-            <?php include "includes/top_navigation.php"; ?>
-
+           <?php include "includes/top_navigation.php"; ?>
            <!-- CLOSE TOP MENU ITEM-->
 
             <!-- SIDEBAR MENU ITEMS -->
