@@ -26,6 +26,29 @@
        UPLOAD_ERR_EXTENSION => "A PHP extension stopped the file upload"
         ); 
 
+     
+       //method for passing the uploaded file as an argument
+      public function set_file($file)
+       {
+         if(empty($file) || !Sfile || !is_array($file))
+          {
+          	$this->custom_errors_array[] = "There was no file uploaded here";
+          	return false;
+          }
+         elseif($file['custom_errors_array'] != 0 )
+          {
+          	$this->custom_errors_array[] = $this->upload_errors_array[$file['error']];
+          	return false;
+          }
+         else
+          {
+      	    $this->photo_filename = basename($file['name']);
+      	    $this->tmp_path = $file['tmp_name'];
+      	    $this->photo_type = $file['type'];
+      	    $this->photo_size = $file['size'];
+      	  }
+
+       }
 
 
     } 
