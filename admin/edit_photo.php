@@ -29,7 +29,7 @@
                         <h1 class="page-header"> Photos <small>Subheading</small>
                         </h1>
 
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                            
                            <div class="form-group">
                               <input type="text" name="title" class="form-control">
