@@ -28,6 +28,30 @@
                     <div class="col-lg-12">
                         <h1 class="page-header"> Photos <small>Subheading</small>
                         </h1>
+
+                        <div class="col-md-12">
+                            
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Photo</th>
+                                        <th>ID</th>
+                                        <th>File Name</th>
+                                        <th>Title</th>
+                                        <th>Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>      
                        
                     </div>
                 </div>
