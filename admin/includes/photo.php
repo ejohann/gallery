@@ -35,7 +35,7 @@
           	$this->custom_errors_array[] = "There was no file uploaded here";
           	return false;
           }
-         elseif($file['custom_errors_array'] != 0 )
+         elseif($file['error'] != 0 )
           {
           	$this->custom_errors_array[] = $this->upload_errors_array[$file['error']];
           	return false;
