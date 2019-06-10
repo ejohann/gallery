@@ -7,7 +7,7 @@ class Db_object
    public static function find_all()
     {
      //  global $database;
-      return self::run_this_query("SELECT * FROM " .self::$db_table. "");
+      return static::run_this_query("SELECT * FROM " .static::$db_table. "");
      // return $result_set;
     }
   
@@ -17,7 +17,7 @@ class Db_object
     {
       global $database;
       $id = $database->escape($id);
-      $result_array = self::run_this_query("SELECT * FROM " .self::$db_table. " WHERE id={$id}");
+      $result_array = static::run_this_query("SELECT * FROM " .static::$db_table. " WHERE id={$id}");
       return !empty($result_array) ? array_shift($result_array) : false;
     }
 
@@ -30,7 +30,7 @@ class Db_object
       $the_object_array = array();
       while($row = $result_set->fetch_array())
        {
-       	 $the_object_array[] = self::instantiation($row);
+       	 $the_object_array[] = static::instantiation($row);
        }
       return $the_object_array;
     }
