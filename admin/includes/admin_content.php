@@ -19,16 +19,16 @@
 
                           $this_user->save();
                         
-                       
-                          $users = User::find_all();
+                        */
+                          $photos = Photo::find_all();
                         
-                          foreach($users as $user)
+                          foreach($photos as $photo)
                            {
-                              echo $user->username;
+                              echo $photo->photo_title;
                            } 
-                            */
+                           
                               
-                          
+                           /*
                           $user = new User();
 
                           $user->username = "Williams";
@@ -37,7 +37,7 @@
                           $user->user_lastname = "Smith";
 
                           $user->save();
-                          /*  */
+                           */
                          ?>
 
                         <ol class="breadcrumb">
