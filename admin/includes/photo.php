@@ -91,6 +91,12 @@
         
       }
 
+      public function image_path()
+       {
+
+       	return $this->upload_directory .DS. $this->photo_filename;
+       }
+
     } 
 
 
