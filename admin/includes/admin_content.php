@@ -9,7 +9,7 @@
                         </h1>
 
                         <?php
-                      
+                      /*
                           $this_user = User::find_by_id(4);
                           
                          $this_user->username = "Jay";
@@ -18,16 +18,16 @@
 
 
                           $this_user->save();
-                          /*
+                         */
                        
-                          $users = User::find_all_users();
+                          $users = User::find_all();
                         
                           foreach($users as $user)
                            {
                               echo $user->username;
                            } 
                               
-                         
+                          /*
                           $user = new User();
 
                           $user->username = "WillS";
