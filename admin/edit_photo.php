@@ -1,5 +1,16 @@
 <?php include("includes/header.php"); ?>
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
+
+<?php 
+ if(isset($_POST['update']))
+  {
+
+    echo "It works";
+  }
+
+
+?>
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +39,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header"> Photos <small>Subheading</small>
                         </h1>
-                        <form action="">
+                        <form action="" method="post">
                         <div class="col-md-8">
                            
                            <div class="form-group">
@@ -69,7 +80,7 @@
                                   </p>
                                   <p class="text">
                                     Filename: <span class="data">image.jpg</span>
-                                  </p>
+                                  </p> 
                                  <p class="text">
                                   File Type: <span class="data">JPG</span>
                                  </p>
