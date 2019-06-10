@@ -9,11 +9,12 @@
 
    $photo = Photo::find_by_id($database->escape($_GET['photo_id']));
 
-   //echo $photo->photo_title;
+   // echo $photo->photo_title;
 
    if($photo)
     {
-    	$photo->delete_photo();
+      $photo->delete_photo();
+      redirect("photos.php");
     }
    else
     {
