@@ -64,7 +64,7 @@ class Db_object
       //return get_object_vars($this);
       $properties = array();
 
-      foreach(self::$db_table_fields as $db_field)
+      foreach(static::$db_table_fields as $db_field)
        {
            if($this->has_the_attribute($db_field))
              {
@@ -97,7 +97,7 @@ class Db_object
      {
          global $database;
          $properties = $this->clean_properties();
-         $insert_user = "INSERT INTO " .self::$db_table. " (" .implode(",", array_keys($properties)). ") ";
+         $insert_user = "INSERT INTO " .static::$db_table. " (" .implode(",", array_keys($properties)). ") ";
          $insert_user .= "VALUES ('". implode("','", array_values($properties)) ."')";
           
           if($database->query($insert_user))
@@ -123,7 +123,7 @@ class Db_object
              $properties_pairs[] = "{$key}='{$value}'";
            }
  
-         $update_user = "UPDATE " .self::$db_table. " SET ";
+         $update_user = "UPDATE " .static::$db_table. " SET ";
          $update_user .= implode(",",  $properties_pairs);
          $update_user .= " WHERE id = " .$database->escape($this->id). "";
           
@@ -136,7 +136,7 @@ class Db_object
      {
        global $database;
        $user_id = $database->escape($this->id);
-       $delete_user = "DELETE FROM " .self::$db_table. " WHERE id = $user_id";
+       $delete_user = "DELETE FROM " .static::$db_table. " WHERE id = $user_id";
        
        return ($database->query($delete_user)) ? true : false ;
      }
