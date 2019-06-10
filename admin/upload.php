@@ -3,9 +3,20 @@
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
 <?php 
+   $message = "";
    if(isset($_POST['submit']))
     {
-      echo "It works";
+      $photo = new Photo();
+      $photo->photo_title = $_POST['title'];
+      $photo->set_file($_FILES['file_upload']);
+      if($photo->save())
+       {
+        $message = "Photo uploaded successfully";
+       }
+      else
+       {
+         $message = join("<br/>", $photo->custom_errors_array);
+       }
     }
 
 ?>
@@ -28,7 +39,7 @@
         </nav>
 
         <div id="page-wrapper">
-
+          <?php echo $message; ?>
           <?php include "includes/upload_content.php"; ?>
 
         </div>
