@@ -5,10 +5,20 @@
  if(isset($_POST['update']))
   {
 
-    echo "It works";
+  //  echo "It works";
   }
 
+ if(empty($_GET['photo_id']))
+   {
+    redirect("../index.php");
+   }
+  else
+   {
+     $photo_id = $database->escape($_GET['photo_id']);
+     $photo = Photo::find_by_id($photo_id);
+   }
 
+   
 ?>
 
         <!-- Navigation -->
