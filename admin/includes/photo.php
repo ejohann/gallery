@@ -30,7 +30,7 @@
        //method for passing the uploaded file as an argument
       public function set_file($file)
        {
-         if(empty($file) || !Sfile || !is_array($file))
+         if(empty($file) || !$file || !is_array($file))
           {
           	$this->custom_errors_array[] = "There was no file uploaded here";
           	return false;
