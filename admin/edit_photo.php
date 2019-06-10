@@ -2,11 +2,7 @@
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
 <?php 
- if(isset($_POST['update']))
-  {
 
-  //  echo "It works";
-  }
 
  if(empty($_GET['photo_id']))
    {
@@ -17,7 +13,18 @@
      $photo_id = $database->escape($_GET['photo_id']);
      $photo = Photo::find_by_id($photo_id);
    }
-
+  
+   if(isset($_POST['update']))
+    {
+      if($photo)
+       {
+         $photo->photo_title = $_POST['title'];
+         $photo->photo_caption = $_POST['caption'];
+         $photo->photo_alternate_text = $_POST['alternate_text'];
+         $photo->photo_description = $_POST['description'];
+       }
+    }
+   
    
 ?>
 
