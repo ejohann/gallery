@@ -47,6 +47,11 @@
                                     <?php foreach($photos as $photo): ?>
                                         <tr>
                                          <td><img width="100px" class="img-responsive" src="<?php echo $photo->image_path(); ?>"/>
+                                            <div class="picture_link">
+                                                <a href="">Delete</a>
+                                                <a href="">Edit</a>
+                                                <a href="">View</a>
+                                            </div>
                                          </td>
                                          <td><?php echo $photo->id; ?></td>
                                          <td><?php echo $photo->photo_filename; ?></td>
