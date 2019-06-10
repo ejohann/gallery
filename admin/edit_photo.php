@@ -28,7 +28,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header"> Photos <small>Subheading</small>
                         </h1>
-
+                        <form action="">
                         <div class="col-md-8">
                            
                            <div class="form-group">
@@ -79,7 +79,7 @@
                               </div>
                               <div class="info-box-footer clearfix">
                                 <div class="info-box-delete pull-left">
-                                    <a  href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-danger btn-lg ">Delete</a>   
+                                    <a  href="delete_photo.php?photo_id=<?php echo $photo->id; ?>" class="btn btn-danger btn-lg ">Delete</a>   
                                 </div>
                                 <div class="info-box-update pull-right ">
                                     <input type="submit" name="update" value="Update" class="btn btn-primary btn-lg ">
@@ -87,7 +87,8 @@
                               </div>
                             </div>          
                         </div>
-                    </div>    
+                    </div> 
+                    </form>   
                        
                     </div>
                 </div>
