@@ -43,6 +43,10 @@
                     <label for="password">password</label>
                     <input type="password" name="password" class="form-control">
                 </div> 
+
+                <div class="form-group">
+                    <input type="submit" name="create_user" class="btn btn-primary" value="Create User">
+                </div> 
              </div>  
            </form>   
                        
