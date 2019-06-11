@@ -17,7 +17,7 @@
 
                 <div class="col-xs-6 col-md-3">
 
-                 
+                 <a class="thumbnail" href=""><img src="admin/<?php echo $photo->image_path(); ?>"  alt="" /> </a>    
              
                 </div>
 
