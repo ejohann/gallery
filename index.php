@@ -13,8 +13,16 @@
 
     
             <?php foreach($photos as $photo): ?>
+              <div class="thumbnails row">
+
+                <div class="col-xs-6 col-md-3">
+
+                 
+             
+                </div>
+
+              </div>
           
-         
 
             <?php endforeach; ?>
 
