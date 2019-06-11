@@ -4,12 +4,13 @@
   {
     
     protected static $db_table = "users";
-    protected static $db_table_fields = array('username','password','user_firstname','user_lastname');
+    protected static $db_table_fields = array('username','password','user_firstname','user_lastname', 'user_image');
     public $id;
     public $username;
     public $password;
     public $user_firstname;
     public $user_lastname;
+    public $user_image;
 
     
 
