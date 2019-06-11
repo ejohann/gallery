@@ -3,9 +3,14 @@
  {
   width: 200px;
   border-radius: 5px;
-
  }
 
+.user-image-thumbnail
+ {
+ 	width: 62px;
+ 	height: 62px;
+ 	border-radius: 5px;
+ }
 
 /*********** EDIT PHOTO SIDEBAR   *************/
 
