@@ -27,7 +27,12 @@
                                          <td><?php echo $comment->id; ?></td>
                                          <td><?php echo $comment->photo_id; ?> </td>
                                          <td><?php echo $comment->author; ?> </td>
-                                         <td><?php echo $comment->content; ?></td>
+                                         <td><?php echo $comment->content; ?>
+                                              <div class="action_link">
+                                                <a href="delete_comment.php?comment_id=<?php echo $comment->id ?>">Delete</a>
+                                            </div>
+
+                                         </td>
                                          
                                          </tr>
                                       <?php endforeach;  ?>
