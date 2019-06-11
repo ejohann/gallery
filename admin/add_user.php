@@ -4,8 +4,14 @@
 <?php 
   if(isset($_POST['create_user']))
   	{
-
-  		echo "Its working";
+       $user = new User();
+       if($user)
+        {
+          $user->username = $_POST['username'];
+          $user->user_password = $_POST['password'];
+          $user->user_firstname = $_POST['user_firstname'];
+          $user->user_lastname = $_POST['user_lastname'];
+       }
   	}
 
 ?>
