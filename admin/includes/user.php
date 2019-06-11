@@ -62,15 +62,11 @@
       {
         if($this->id)
          {
-          $this->update();
-         }
-        else
-         {
-          if(!empty($this->custom_errors_array))
+           if(!empty($this->custom_errors_array))
            {
             return false;
            }
-          if(empty($this->user_image) || empty($this->tmp_path))
+          if(empty($this->user_image) || empty($this->user_image_tmp_path))
            {
             $this->custom_errors_array[] = "The file is not available";
             return false;
@@ -81,11 +77,42 @@
             $this->custom_errors_array[] = "The file {$this->user_image} already exists";
             return false;
            }
-          if(move_uploaded_file($this->tmp_path, $target_path))
+          if(move_uploaded_file($this->user_image_tmp_path, $target_path))
+           {
+            if($this->update())
+             {
+              unset($this->user_image_tmp_path);
+              return true;
+             }
+           }
+          else
+           {
+            $this->custom_errors_array[] = "The file directory does not have permissions";
+            return false;
+           }
+         }
+        else
+         {
+          if(!empty($this->custom_errors_array))
+           {
+            return false;
+           }
+          if(empty($this->user_image) || empty($this->user_image_tmp_path))
+           {
+            $this->custom_errors_array[] = "The file is not available";
+            return false;
+           }
+          $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
+          if(file_exists($target_path))
+           {
+            $this->custom_errors_array[] = "The file {$this->user_image} already exists";
+            return false;
+           }
+          if(move_uploaded_file($this->user_image_tmp_path, $target_path))
            {
             if($this->create())
              {
-              unset($this->tmp_path);
+              unset($this->user_image_tmp_path);
               return true;
              }
            }
