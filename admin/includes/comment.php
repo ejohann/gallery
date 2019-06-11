@@ -33,7 +33,7 @@
       {
       	  global $database;
       	  $photo_id = $database->escape($photo_id);
-          $select_comment = "SELECT * FROM " .self::$db_table. "WHERE photo_id = " .$photo_id. " ORDER BY photo_id ASC";
+          $select_comment = "SELECT * FROM " .self::$db_table. " WHERE photo_id = " .$photo_id. " ORDER BY photo_id ASC";
           return self::run_this_query($select_comment);
       }
 
