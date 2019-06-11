@@ -64,12 +64,23 @@
          {
            if(!empty($this->user_image_tmp_path))
             {
-              $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
-              move_uploaded_file($this->user_image_tmp_path, $target_path);
-              unset($this->user_image_tmp_path);
-            }
 
-            $this->update();             
+              $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
+              if(file_exists($target_path))
+               {
+                 $this->custom_errors_array[] = "The file {$this->photo_filename} already exists";
+                 return false;
+               }
+              else
+               {
+                   move_uploaded_file($this->user_image_tmp_path, $target_path);
+                   unset($this->user_image_tmp_path);
+               }
+            }
+           if($this->update())
+             {
+               return true;
+             }             
          }
         else
          {
@@ -82,27 +93,26 @@
             $this->custom_errors_array[] = "The file is not available";
             return false;
            }
-          $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
-          if(file_exists($target_path))
-           {
-            $this->custom_errors_array[] = "The file {$this->user_image} already exists";
-            return false;
-           }
-          if(move_uploaded_file($this->user_image_tmp_path, $target_path))
-           {
-            if($this->create())
+
+           if(!empty($this->user_image_tmp_path))
+            {
+              $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
+               if(file_exists($target_path))
+               {
+                 $this->custom_errors_array[] = "The file {$this->user_image} already exists";
+                 return false;
+               }
+              else
+               {
+                   move_uploaded_file($this->user_image_tmp_path, $target_path);
+                   unset($this->user_image_tmp_path);
+               }
+            }
+           if($this->create())
              {
-              unset($this->user_image_tmp_path);
-              return true;
+               return true;
              }
-           }
-          else
-           {
-            $this->custom_errors_array[] = "The file directory does not have permissions";
-            return false;
-           }
          }
-        
       }
 
   }
