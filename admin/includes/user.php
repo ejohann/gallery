@@ -11,6 +11,8 @@
     public $user_firstname;
     public $user_lastname;
     public $user_image;
+    public $user_upload_directory = "images";
+    public $user_image_placeholder = "http://placeholder.it/400x400&text=image";
 
     
 
