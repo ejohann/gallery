@@ -12,7 +12,7 @@
     public $user_lastname;
     public $user_image;
     public $user_upload_directory = "images";
-    public $user_image_placeholder = "http://placeholder.it/400x400&text=image";
+    public $user_image_placeholder = "http://placehold.it/400x400&text=image";
 
     
 
@@ -20,15 +20,11 @@
     public static function verify_user($username, $password)
      {
        global $database;
-
        $username = $database->escape($username);
        $password = $database->escape($password);
-
        $select_user = "SELECT * FROM " .self::$db_table. " WHERE username = '{$username}' AND password = '{$password}' LIMIT 1";
        $result_array = self::run_this_query($select_user);
-
        return !empty($result_array) ? array_shift($result_array) : false;
-      
      }
      
     
