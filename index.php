@@ -11,9 +11,9 @@
             <!-- Blog Entries Column -->
             <div class="col-md-12">
 
-    
+           <div class="thumbnails row">
             <?php foreach($photos as $photo): ?>
-              <div class="thumbnails row">
+             
 
                 <div class="col-xs-6 col-md-3">
 
@@ -21,11 +21,8 @@
              
                 </div>
 
-              </div>
-          
-
-            <?php endforeach; ?>
-
+             <?php endforeach; ?>
+            </div>
             </div>
 
 
