@@ -11,6 +11,9 @@
           $user->user_password = $_POST['password'];
           $user->user_firstname = $_POST['user_firstname'];
           $user->user_lastname = $_POST['user_lastname'];
+
+          $user->set_file($_FILES['image_upload']);
+          $user->save_user();
        }
   	}
 
@@ -55,7 +58,7 @@
 
                 <div class="form-group">
                     <label for="user_lastname">Last name</label>
-                    <input type="text" name="alternate_text" class="form-control">
+                    <input type="text" name="user_lastname" class="form-control">
                 </div> 
 
                 <div class="form-group">
