@@ -12,9 +12,11 @@
             <div class="col-md-12">
 
     
-            
+            <?php foreach($photos as $photo): ?>
           
          
+
+            <?php endforeach; ?>
 
             </div>
 
