@@ -10,8 +10,9 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Users</th>
+                                        
                                         <th>ID</th>
+                                        <th>Photo</th>
                                         <th>Username</th>
                                         <th>First name</th>
                                         <th>Last name</th>
@@ -22,8 +23,9 @@
                                     <?php $users = User::find_all(); ?>
                                     <?php foreach($users as $user): ?>
                                         <tr>
-                                         <td>  </td>
+                                         
                                          <td><?php echo $user->id; ?></td>
+                                         <td>  </td>
                                          <td><?php echo $user->username; ?></td>
                                          <td><?php echo $user->user_firstname; ?></td>
                                          <td><?php echo $user->user_lastname; ?></td>
