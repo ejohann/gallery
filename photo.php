@@ -2,6 +2,10 @@
 
 <?php
 
+  if(empty($_GET['photo_id']))
+   {
+     redirect("index.php");
+   }
   $photo = Photo::find_by_id($_GET['photo_id']);
 
   echo $photo->photo_title;
