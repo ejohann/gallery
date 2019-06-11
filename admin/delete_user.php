@@ -7,5 +7,9 @@
    	redirect("../index.php");
    }
 
+   $user = User::find_by_id($database->escape($_GET['user_id']));
+
+   echo $user->username;    
+
    
 ?>
