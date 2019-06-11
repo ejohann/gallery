@@ -21,8 +21,8 @@
             $user->user_firstname = $_POST['user_firstname'];
             $user->user_lastname = $_POST['user_lastname'];
 
-           // $user->set_file($_FILES['image_upload']);
-           // $user->save_user();
+            $user->set_file($_FILES['image_upload']);
+            $user->save_user();
        }
   	}
    }
@@ -59,6 +59,9 @@
              <form action="" method="post" enctype="multipart/form-data">
              
              <div class="col-md-6">
+             	<div class="form-group">
+                   <input type="file" name="image_upload" class="form-control">
+                </div> 
 
                 <div class="form-group">
                 	<label for="username">Username</label>
