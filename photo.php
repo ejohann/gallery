@@ -6,14 +6,17 @@
    {
      redirect("index.php");
    }
+
   $photo = Photo::find_by_id($_GET['photo_id']);
 
-  echo $photo->photo_title;
+  //echo $photo->photo_title;
 
 
 if(isset($_POST['submit']))
  {
-   echo "it works";
+   $author = trim($_POST['author']);
+   $body = trim($_POST['body']);
+
 
  }
 
