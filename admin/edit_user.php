@@ -53,7 +53,7 @@
      <!-- Page Heading -->
      <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header"> Add User <small>Subheading</small></h1>
+          <h1 class="page-header"> Edit User <small>Subheading</small></h1>
              
              <div class="col-md-6">
                 <img class="img-responsive" src="<?php echo $user->image_placeholder() ;?>" />
