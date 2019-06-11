@@ -51,11 +51,14 @@
      <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header"> Add User <small>Subheading</small></h1>
-          <form action="" method="post" enctype="multipart/form-data">
-            <div class="col-md-6 col-md-offset-3">
-            	<div class="form-group">
-                   <img width="100px" class="thumbnail" src="<?php echo $user->image_placeholder() ;?>" />
-                </div> 
+             
+             <div class="col-md-6">
+                <img width="400px" class="thumbnail" src="<?php echo $user->image_placeholder() ;?>" />
+             </div>
+             
+             <form action="" method="post" enctype="multipart/form-data">
+             
+             <div class="col-md-6">
 
                 <div class="form-group">
                 	<label for="username">Username</label>
