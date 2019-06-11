@@ -1,6 +1,15 @@
 <?php include("includes/header.php"); ?>
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
+<?php 
+  if(isset($_POST['create_user']))
+  	{
+
+  		echo "Its working";
+  	}
+
+?>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
  <!-- Brand and toggle get grouped for better mobile display -->
