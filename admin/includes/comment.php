@@ -31,7 +31,8 @@
 
      public static function find_the_comments($photo_id)
       {
-          $select_comment = "SELECT * FROM " .self::$db_table. "WHERE photo_id = " $photo_id " ORDER BY id ASC";
+      	  global $database;
+          $select_comment = "SELECT * FROM " .self::$db_table. "WHERE photo_id = " $database->escape($photo_id) " ORDER BY id ASC";
           return self::run_this_query($select_comment);
       }
 
