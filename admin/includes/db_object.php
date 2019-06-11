@@ -154,6 +154,15 @@ class Db_object
        return ($database->query($delete_record)) ? true : false ;
      }
 
+     public static function count_all()
+      {
+         global $database;
+         $select_all = "SELECT count(*) FROM " .static::$db_table. " ";
+         $result_set = $database->query($select_all);
+         $row = mysqli_fetch_array($result_set);
+         return array_shift($row);
+      }
+
 
  }
 
