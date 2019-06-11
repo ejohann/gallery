@@ -47,7 +47,7 @@ if(isset($_POST['submit']))
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
+                <h1><?php echo $photo->photo_title; ?></h1>
 
                 <!-- Author -->
                 <p class="lead">
