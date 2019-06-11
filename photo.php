@@ -6,17 +6,26 @@
    {
      redirect("index.php");
    }
-
+  
   $photo = Photo::find_by_id($_GET['photo_id']);
 
   //echo $photo->photo_title;
 
-
+$message = "";
 if(isset($_POST['submit']))
  {
    $author = trim($_POST['author']);
    $body = trim($_POST['body']);
 
+   $new_comment = Comment::create_comment($photo->id, $author, $body);
+   if($new_comment && $new_comment->save())
+    {
+        redirect("photo.php?photo_id={$photo_id}");
+    }
+   else
+   {
+     $message = "There was a problem saving the comment";
+   }
 
  }
 
@@ -135,6 +144,7 @@ if(isset($_POST['submit']))
 
                 <!-- Comments Form -->
                 <div class="well">
+                    <?php echo $message; ?>
                     <h4>Leave a Comment:</h4>
 
                     <form role="form" method="post">
