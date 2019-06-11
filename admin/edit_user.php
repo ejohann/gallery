@@ -85,7 +85,7 @@
                     <label for="password">password</label>
                     <input type="password" name="password" class="form-control">
                 </div> 
-
+                 <a class="btn btn-danger pull-left" href="delete_user.php?user_id=<?php echo $user->id ?>">Delete</a>
                 <div class="form-group">
                     <input type="submit" name="update_user" class="btn btn-primary pull-right" value="Update User">
                 </div> 
