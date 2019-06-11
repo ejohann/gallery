@@ -125,9 +125,11 @@ if(isset($_POST['submit']))
 
                     <form role="form" method="post">
                         <div class="form-group">
+                             <label for="author">Author</label>
                             <input type="text" name="author" class="form-control" rows="3">
                         </div>
                         <div class="form-group">
+                            <label for="body">Comment</label>
                             <textarea name="body" class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
