@@ -22,14 +22,14 @@
 
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <!--<div class="col-md-4">
 
             
-                 <?php include("includes/sidebar.php"); ?>
+                 <?php // include("includes/sidebar.php"); ?>
 
 
 
-        </div>
+         </div> -->
         <!-- /.row -->
 
         <?php include("includes/footer.php"); ?>
