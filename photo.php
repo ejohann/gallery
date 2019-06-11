@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
    $new_comment = Comment::create_comment($photo->id, $author, $content);
    if($new_comment && $new_comment->save())
     {
-        redirect("photo.php?photo_id={$photo_id}");
+        redirect("photo.php?photo_id={$photo->id}");
     }
    else
    {
