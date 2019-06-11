@@ -26,7 +26,13 @@
                                          
                                          <td><?php echo $user->id; ?></td>
                                          <td>  </td>
-                                         <td><?php echo $user->username; ?></td>
+                                         <td><?php echo $user->username; ?>
+                                             <div class="action_link">
+                                                <a href="delete_user.php?user_id=<?php echo $user->id ?>">Delete</a>
+                                                <a href="edit_user.php?user_id=<?php echo $user->id ?>">Edit</a>
+                                                <a href="">View</a>
+                                            </div>
+                                         </td>
                                          <td><?php echo $user->user_firstname; ?></td>
                                          <td><?php echo $user->user_lastname; ?></td>
                                          </tr>
