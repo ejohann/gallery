@@ -62,34 +62,14 @@
       {
         if($this->id)
          {
-           if(!empty($this->custom_errors_array))
-           {
-            return false;
-           }
-          if(empty($this->user_image) || empty($this->user_image_tmp_path))
-           {
-            $this->custom_errors_array[] = "The file is not available";
-            return false;
-           }
-          $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
-          if(file_exists($target_path))
-           {
-            $this->custom_errors_array[] = "The file {$this->user_image} already exists";
-            return false;
-           }
-          if(move_uploaded_file($this->user_image_tmp_path, $target_path))
-           {
-            if($this->update())
-             {
+           if(!empty($this->user_image_tmp_path))
+            {
+              $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
+              move_uploaded_file($this->user_image_tmp_path, $target_path);
               unset($this->user_image_tmp_path);
-              return true;
-             }
-           }
-          else
-           {
-            $this->custom_errors_array[] = "The file directory does not have permissions";
-            return false;
-           }
+            }
+
+            $this->update();             
          }
         else
          {
