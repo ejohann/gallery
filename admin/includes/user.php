@@ -28,7 +28,11 @@
      }
      
     
-    
+    public function image_placeholder()
+     {
+         
+      return empty($this->user_image) ? $this->user_image_placeholder : $this->user_upload_directory.DS.$this->user_image;
+     }
     
 
   }
