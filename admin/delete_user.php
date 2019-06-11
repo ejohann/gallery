@@ -9,7 +9,14 @@
 
    $user = User::find_by_id($database->escape($_GET['user_id']));
 
-   echo $user->username;    
-
+   if($user)
+    {
+      $user->delete();
+      redirect("users.php");
+    }
+   else
+    {
+    	redirect("users.php");
+    }
    
 ?>
