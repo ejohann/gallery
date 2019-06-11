@@ -39,6 +39,10 @@
           <h1 class="page-header"> Add User <small>Subheading</small></h1>
           <form action="" method="post" enctype="multipart/form-data">
             <div class="col-md-6 col-md-offset-3">
+            	<div class="form-group">
+                   <input type="file" name="image_upload" class="form-control">
+                </div> 
+
                 <div class="form-group">
                 	<label for="username">Username</label>
                    <input type="text" name="username" class="form-control">
