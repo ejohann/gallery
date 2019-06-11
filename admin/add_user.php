@@ -2,6 +2,7 @@
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
 <?php 
+  $message = "";
   if(isset($_POST['create_user']))
   	{
        $user = new User();
@@ -13,7 +14,15 @@
           $user->user_lastname = $_POST['user_lastname'];
 
           $user->set_file($_FILES['image_upload']);
-          $user->save_user();
+          
+          if($user->save_user())
+           {
+              $message = "User information uploaded successfully";
+            }
+          else
+           {
+              $message = join("<br/>", $user->custom_errors_array);
+           }
        }
   	}
 
@@ -35,6 +44,7 @@
 </nav>
 
 <div id="page-wrapper">
+	<?php echo $message; ?>
   <div class="container-fluid">
      <!-- Page Heading -->
      <div class="row">
