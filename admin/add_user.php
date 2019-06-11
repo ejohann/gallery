@@ -36,7 +36,7 @@
 
                 <div class="form-group">
                     <label for="user_lastname">Last name</label>
-                    <input type="text" name="alternate_text" value="<?php echo $photo->photo_alternate_text; ?>" class="form-control">
+                    <input type="text" name="alternate_text" class="form-control">
                 </div> 
 
                 <div class="form-group">
