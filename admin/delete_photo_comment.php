@@ -12,11 +12,11 @@
    if($comment)
     {
       $comment->delete();
-      redirect("photo_comments.php");
+      redirect("photo_comments.php?photo_id=$comment->photo_id");
     }
    else
     {
-    	redirect("photo_comments.php");
+    	redirect("photo_comments.php?photo_id=$comment->photo_id");
     }
    
 ?>
