@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-12">
 
                 <!-- Blog Post -->
 
@@ -129,10 +129,10 @@ if(isset($_POST['submit']))
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-          <?php include("includes/sidebar.php"); ?>
+          <!--  <div class="col-md-4">
+          <?php //include("includes/sidebar.php"); ?>
 
-            </div>
+            </div> -->
 
         </div>
         <!-- /.row -->
