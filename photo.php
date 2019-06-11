@@ -1,3 +1,5 @@
+<?php require_once("admin/includes/init.php"); ?>
+
 <?php
 
 if(isset($_POST['submit']))
