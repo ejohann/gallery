@@ -4,7 +4,7 @@
  class Comment extends Db_object
     {
       protected static $db_table = "comments";
-      protected static $db_table_fields = array('id','photo_id','author','body');
+      protected static $db_table_fields = array('id','photo_id','author','content');
       public $id;
       public $photo_id;
       public $author;
