@@ -11,6 +11,24 @@
       public $body;
        
 
+      public static function create_comment($photo_id, $author, $body)
+       {
+          if(!empty($photo_id) && !empty($author) && !empty($body))
+          	 {
+                $comment = new Comment();
+
+                $comment->photo_id = (int)$photo_id;
+                $comment->author = $author;
+                $comment->body = $body;
+               return $comment;
+          	 }
+          	else
+          	{
+          		return false;
+          	}
+
+       }
+
 
     }
 
