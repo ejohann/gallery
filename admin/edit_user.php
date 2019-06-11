@@ -53,7 +53,7 @@
           <h1 class="page-header"> Add User <small>Subheading</small></h1>
              
              <div class="col-md-6">
-                <img width="400px" class="thumbnail" src="<?php echo $user->image_placeholder() ;?>" />
+                <img class="img-responsive" src="<?php echo $user->image_placeholder() ;?>" />
              </div>
              
              <form action="" method="post" enctype="multipart/form-data">
