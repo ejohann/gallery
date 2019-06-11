@@ -15,9 +15,9 @@ $message = "";
 if(isset($_POST['submit']))
  {
    $author = trim($_POST['author']);
-   $body = trim($_POST['body']);
+   $content = trim($_POST['content']);
 
-   $new_comment = Comment::create_comment($photo->id, $author, $body);
+   $new_comment = Comment::create_comment($photo->id, $author, $content);
    if($new_comment && $new_comment->save())
     {
         redirect("photo.php?photo_id={$photo_id}");
@@ -153,8 +153,8 @@ if(isset($_POST['submit']))
                             <input type="text" name="author" class="form-control" rows="3">
                         </div>
                         <div class="form-group">
-                            <label for="body">Comment</label>
-                            <textarea name="body" class="form-control" rows="3"></textarea>
+                            <label for="content">Comment</label>
+                            <textarea name="content" class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </form>
