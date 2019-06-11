@@ -2,13 +2,14 @@
 <?php if(!$session->is_signed_in()){ redirect("login.php"); } ?>
 
 <?php
-
+ 
  if(empty($_GET['user_id']))
    {
     redirect("../index.php");
    }
   else
    {
+   	 $message = "";
      $user_id = $database->escape($_GET['user_id']);
      $user = User::find_by_id($user_id);
 
@@ -25,7 +26,14 @@
             $user->user_firstname = $_POST['user_firstname'];
             $user->user_lastname = $_POST['user_lastname'];
             $user->set_file($_FILES['image_upload']);
-            $user->save_user();
+            if($user->save_user())
+             {
+                $message = "User information updated successfully";
+             }
+           else
+            {
+              $message = join("<br/>", $user->custom_errors_array);
+            }
        }
   	}
    }
@@ -49,6 +57,7 @@
 </nav>
 
 <div id="page-wrapper">
+  <?php echo $message; ?>
   <div class="container-fluid">
      <!-- Page Heading -->
      <div class="row">
