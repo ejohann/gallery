@@ -1,5 +1,10 @@
 <?php include("includes/header.php"); ?>
 
+<?php 
+  
+  $photos = Photo::find_all();
+  
+?>
 
         <div class="row">
 
