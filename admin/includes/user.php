@@ -13,8 +13,10 @@
     public $user_image;
     public $user_upload_directory = "images";
     public $user_image_placeholder = "http://placehold.it/400x400&text=image";
-
-    
+    public $user_image_tmp_path;
+    public $user_image_type;
+    public $user_image_size;
+ 
 
     //method to verify a user
     public static function verify_user($username, $password)
@@ -50,9 +52,9 @@
          else
           {
             $this->user_image = basename($file['name']);
-            $this->tmp_path = $file['tmp_name'];
-            $this->photo_type = $file['type'];
-            $this->photo_size = $file['size'];
+            $this->user_image_tmp_path = $file['tmp_name'];
+            $this->user_image_type = $file['type'];
+            $this->user_image_size = $file['size'];
           }
        }
 
