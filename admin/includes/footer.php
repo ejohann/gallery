@@ -16,7 +16,7 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
+          ['Data', 'Count'],
           ['Views',     <?php echo $session->count; ?>],
           ['Comments', <?php echo Comment::count_all(); ?>],
           ['Users',  <?php echo User::count_all(); ?>],
@@ -27,7 +27,7 @@
         var options = {
           legend: 'none',
           pieSliceText: 'label',	
-          title: 'My Daily Activities',
+          title: 'Photo Gallery Data',
           backgroundColor: 'transparent'
         };
 
