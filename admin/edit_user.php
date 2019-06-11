@@ -16,11 +16,14 @@
   	  {
          if($user)
           {
+            if(!empty($_POST['password']) && $_POST['password'] != $user->password)
+             {
+                 $user->password = $_POST['password'];
+             } 
+          
             $user->username = $_POST['username'];
-            // $user->user_password = $_POST['password'];
             $user->user_firstname = $_POST['user_firstname'];
             $user->user_lastname = $_POST['user_lastname'];
-
             $user->set_file($_FILES['image_upload']);
             $user->save_user();
        }
