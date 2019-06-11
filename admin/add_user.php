@@ -45,7 +45,7 @@
                 </div> 
 
                 <div class="form-group">
-                    <input type="submit" name="create_user" class="btn btn-primary" value="Create User">
+                    <input type="submit" name="create_user" class="btn btn-primary pull-right" value="Create User">
                 </div> 
              </div>  
            </form>   
