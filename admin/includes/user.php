@@ -68,7 +68,7 @@
               $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
               if(file_exists($target_path))
                {
-                 $this->custom_errors_array[] = "The file {$this->photo_filename} already exists";
+                 $this->custom_errors_array[] = "The file {$this->user_image} already exists";
                  return false;
                }
               else
