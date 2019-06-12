@@ -3,6 +3,9 @@ $(document).ready(function() {
   var user_href;
   var user_href_split;
   var user_id;
+  var image_href;
+  var image_href_split;
+  var image_id;
 
   $(".modal_thumbnails").click(function(){
 
