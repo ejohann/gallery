@@ -5,7 +5,7 @@ $(document).ready(function() {
   var user_id;
   var image_href;
   var image_href_split;
-  var image_id;
+  var image_name;
 
   $(".modal_thumbnails").click(function(){
 
@@ -17,13 +17,13 @@ $(document).ready(function() {
 
     user_id = user_href_split[user_href_split.length -1];
 
-    image_href = $($this).prop("src");
+    image_href = $(this).prop("src");
 
     image_href_split = image_href.split("/");
 
-    image_id = image_href_split[image_href_split.length -1];
+    image_name = image_href_split[image_href_split.length -1];
 
-    console.log(image_id);
+    console.log(image_name);
     
   });
 
