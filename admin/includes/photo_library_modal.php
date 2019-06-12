@@ -15,6 +15,7 @@
              <div class="thumbnails row">
             
                 <!-- PHP LOOP HERE CODE HERE-->
+                <?php foreach($photos as $photo): ?>
                 
                <div class="col-xs-2">
                  <a role="checkbox" aria-checked="false" tabindex="0" id="" href="#" class="thumbnail">
@@ -22,7 +23,7 @@
                  </a>
                   <div class="photo-id hidden"></div>
                </div>
-
+                 <?php endforeach; ?>
                     <!-- PHP LOOP HERE CODE HERE-->
 
              </div>
