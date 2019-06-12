@@ -1,3 +1,5 @@
+<?php require_once("init.php"); ?>
+
 <div class="modal fade" id="photo-library">
   <div class="modal-dialog">
     <div class="modal-content">
