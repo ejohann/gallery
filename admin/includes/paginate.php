@@ -37,6 +37,11 @@
        return $this->next_page() <= $this->page_total() ? true : false;
      }
 
+    public function offset()
+     {
+     	return ($this->current_page - 1) * $this->items_per_page;
+     }
+
    }
 
 
