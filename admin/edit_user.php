@@ -65,7 +65,7 @@
           <h1 class="page-header"> Edit User <small>Subheading</small></h1>
              
              <div class="col-md-6">
-                <img class="img-responsive" src="<?php echo $user->image_placeholder() ;?>" />
+                <a href="#" data-toggle="modal" data-target="photo-library" ><img class="img-responsive" src="<?php echo $user->image_placeholder() ;?>" /></a>
              </div>
              
              <form action="" method="post" enctype="multipart/form-data">
