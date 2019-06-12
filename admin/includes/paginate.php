@@ -10,7 +10,6 @@
          $this->current_page = (int)$page;
          $this->items_per_page = (int)$items_per_page;
          $this->items_total_count = (int)$items_total_count;
-
        }
       
      public function next_page()
@@ -20,10 +19,10 @@
 
      public function previous_page()
       {
-
       	return $this->current_page -1;
       }
 
+    
 
    }
 
