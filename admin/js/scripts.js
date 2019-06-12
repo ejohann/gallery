@@ -9,6 +9,12 @@ $(document).ready(function() {
     $("#set_user_image").prop('disabled', false);
      
     user_href = $("#user-id-del").prop('href');
+
+    user_href_split = user_href.split("=");
+
+    user_id = user_href_split[user_href_split.length -1];
+
+    console.log(user_id);
     
   });
 
