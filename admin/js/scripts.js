@@ -17,7 +17,13 @@ $(document).ready(function() {
 
     user_id = user_href_split[user_href_split.length -1];
 
-    console.log(user_id);
+    image_href = $($this).prop("src");
+
+    image_href_split = image_href.split("/");
+
+    image_id = image_href_split[image_href_split.length -1];
+
+    console.log(image_id);
     
   });
 
