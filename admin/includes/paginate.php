@@ -32,6 +32,11 @@
        return $this->previous_page() >=1 ? true : false;
      }
 
+    public function has_next()
+     {
+       return $this->next_page() <= $this->page_total() ? true : false;
+     }
+
    }
 
 
