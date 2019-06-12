@@ -2,7 +2,7 @@
 
 <?php 
   
-  $page = !empty($_GET['page']) ? $_GET['page'] : 1;
+  $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
   $photos = Photo::find_all();
   
