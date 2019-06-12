@@ -27,6 +27,11 @@
      	return ceil($this->items_total_count/$this->items_per_page);
      }
 
+    public function has_previous()
+     {
+       return $this->previous_page() >=1 ? true : false;
+     }
+
    }
 
 
