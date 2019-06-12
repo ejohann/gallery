@@ -13,6 +13,17 @@
 
        }
       
+     public function next_page()
+      {
+      	return $this->current_page + 1;
+      }
+
+     public function previous_page()
+      {
+
+      	return $this->current_page -1;
+      }
+
 
    }
 
