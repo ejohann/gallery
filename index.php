@@ -7,6 +7,12 @@
   $items_total_count = Photo::count_all();
 
   $paginate = new Paginate($page, $items_per_page, $items_total_count);
+
+  $select_by_page = "SELECT * FROM photos ";
+  $select_by_page .= "LIMIT {$paginate->items_per_page} ";
+  $select_by_page .= "OFFSET {$paginate->offset()}";
+
+  $photos = Photo::run_this_query($select_by_page);
    
   //$photos = Photo::find_all();
   
