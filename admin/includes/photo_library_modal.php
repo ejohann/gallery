@@ -1,4 +1,7 @@
 <?php require_once("init.php"); ?>
+<?php 
+  $photos = Photo::find_all();
+?>
 
 <div class="modal fade" id="photo-library">
   <div class="modal-dialog">
