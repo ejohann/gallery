@@ -6,6 +6,7 @@ $(document).ready(function() {
   var image_href;
   var image_href_split;
   var image_name;
+  var photo_id;
 
   $(".modal_thumbnails").click(function(){
 
