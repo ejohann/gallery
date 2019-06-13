@@ -93,3 +93,8 @@ position: fixed !important;
 
 }
 
+/***********  LOGIN PAGE  *************/
+#login-id label
+{
+  color: #ffffff;
+}
