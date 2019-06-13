@@ -9,15 +9,15 @@
 
    $photo = Photo::find_by_id($database->escape($_GET['photo_id']));
 
-   // echo $photo->photo_title;
-
    if($photo)
     {
       $photo->delete_photo();
+      $session->message("Photo was deleted successfully");
       redirect("photos.php");
     }
    else
     {
+      $session->message(join("<br/>", $photo->custom_errors_array));
     	redirect("photos.php");
     }
 ?>
