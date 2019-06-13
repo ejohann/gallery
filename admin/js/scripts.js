@@ -23,6 +23,8 @@ $(document).ready(function() {
     image_href_split = image_href.split("/");
 
     image_name = image_href_split[image_href_split.length -1];
+
+    photo_id = $(this).attr("data");
     
   });
 
