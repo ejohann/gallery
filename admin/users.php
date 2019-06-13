@@ -22,7 +22,7 @@
         </nav>
 
         <div id="page-wrapper">
-
+           <?php echo $session->message; ?>
           <?php include "includes/users_content.php"; ?>
 
         </div>
