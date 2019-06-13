@@ -99,7 +99,7 @@
          }
       }  
 
-     public function ajax_show_photo_info($photo_id)
+     public static function ajax_show_photo_info($photo_id)
       {
         global $database;
        $photo_id = $database->escape($photo_id);
