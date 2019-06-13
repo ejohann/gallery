@@ -37,7 +37,7 @@ $(document).ready(function() {
       success: function(data){
         if(!data.error)
         {
-        	
+        	location.reload(true);
         }
       }
     });
