@@ -97,8 +97,18 @@
          {
          	return false;
          }
-
       }  
+
+     public function ajax_show_photo_info($photo_id)
+      {
+        global $database;
+       $photo_id = $database->escape($photo_id);
+       $photo = static::find_by_id($photo_id);
+       if($photo)
+       {
+         echo "<h2>$photo->photo_title</h2><p>$photo->photo_caption</p><p>Description: <small>$photo->photo_description</small></p><p>Name: <small>$photo->photo_filename</small></p><p>Type: <small>$photo->photo_type</small></p><p> Size: <small>$photo->photo_size</small></p>";
+       }
+      } 
 
     } 
 
