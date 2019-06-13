@@ -83,7 +83,7 @@ class Session
          }
       }
 
-    public function check_message()
+    private function check_message()
       {
         if(isset($_SESSION['message']))
          {
