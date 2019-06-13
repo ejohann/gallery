@@ -22,15 +22,18 @@ $(document).ready(function() {
     image_href_split = image_href.split("/");
 
     image_name = image_href_split[image_href_split.length -1];
-
-    console.log(image_name);
     
   });
 
 
+  $("#set_user_image").click(function(){
+
+     alert(image_name);
+
+    });
 
 
-   
+
    tinymce.init({selector:'textarea'});
 });
 
