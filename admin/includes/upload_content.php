@@ -11,7 +11,7 @@
                                 <input type="text" name="title" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input type="file" name="file_upload" class="form-control">
+                                <input type="file" name="file" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit">
@@ -23,7 +23,7 @@
 
                 <div class="row">
                   <div class="col-lg-12">
-                       <form action="upload" class="dropzone"></form>
+                       <form action="upload.php" class="dropzone"></form>
                   </div>
                  </div>
 
