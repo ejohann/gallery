@@ -118,9 +118,13 @@
 
     public function ajax_save_user_image($user_image, $user_id)
      {      
-       $this->user_image = $user_image;
-       $this->id = $user_id;
-       $this->save();
+       global $database;
+       $this->user_image = $database->escape($user_image);
+       $this->id = $database->escape($user_id);
+       
+       $update_image = "UPDATE " .self::$db_table. " SET user_image = '{$this->user_image}' WHERE id = {$this->id}";
+       $database->query($update_image);
+       echo $this->image_placeholder();
      }
 
   }
