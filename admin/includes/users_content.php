@@ -28,7 +28,7 @@
                                          <td><img class="user-image-thumbnail" src="<?php echo $user->image_placeholder(); ?>"/>  </td>
                                          <td><?php echo $user->username; ?>
                                              <div class="action_link">
-                                                <a href="delete_user.php?user_id=<?php echo $user->id ?>">Delete</a>
+                                                <a class="delete_link" href="delete_user.php?user_id=<?php echo $user->id ?>">Delete</a>
                                                 <a href="edit_user.php?user_id=<?php echo $user->id ?>">Edit</a>
                                                 <a href="">View</a>
                                             </div>
