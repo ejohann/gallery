@@ -67,6 +67,16 @@ $(document).ready(function() {
 
    });
 
+ /************  DELETE PHOTO CONFIRM   ************/
+
+  $(".delete_link").click(function(){
+
+  return confirm("Are you sure you want to delete this item");
+
+  });
+  
+
+
    tinymce.init({selector:'textarea'});
 });
 
