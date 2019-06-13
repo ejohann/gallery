@@ -60,7 +60,11 @@ $(document).ready(function() {
     });
     });
 
+   $(".info-box-header").click(function(){
 
+    alert("it works");
+
+   });
 
    tinymce.init({selector:'textarea'});
 });
