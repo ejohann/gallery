@@ -63,6 +63,7 @@ $(document).ready(function() {
    $(".info-box-header").click(function(){
 
     $(".inside").slideToggle("fast");
+    $("#toggle").toggleClass("glyphicon-menu-down glyphicon , glyphicon-menu-up glyphicon ");
 
    });
 
