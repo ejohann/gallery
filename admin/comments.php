@@ -20,7 +20,7 @@
         </nav>
 
         <div id="page-wrapper">
-          <p class="bg_success"><?php echo $session->message; ?></p>
+          <p class="bg-success"><?php echo $session->message; ?></p>
           <?php include "includes/comments_content.php"; ?>
 
         </div>
