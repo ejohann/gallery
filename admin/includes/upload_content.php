@@ -19,8 +19,13 @@
                         </form>
                       </div>
                     </div>
-                </div>
-                <!-- /.row -->
+                </div><!-- /.row -->
+
+                <div class="row">
+                  <div class="col-lg-12">
+                       <form action="upload" class="dropzone"></form>
+                  </div>
+                 </div>
 
             </div>
             <!-- /.container-fluid -->
