@@ -11,7 +11,7 @@
 
    if($user)
     {
-      $user->delete();
+      $user->delete_user_photo();
       $session->message("The user {$user->username} has been deleted successfully");
       redirect("users.php");
     }
