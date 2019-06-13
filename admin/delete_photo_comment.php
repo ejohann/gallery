@@ -12,6 +12,7 @@
    if($comment)
     {
       $comment->delete();
+      $session->message("Photo {$photo->photo_filename} was deleted successfully");
       redirect("photo_comments.php?photo_id=$comment->photo_id");
     }
    else
