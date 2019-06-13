@@ -12,6 +12,7 @@
    if($user)
     {
       $user->delete();
+      $session->message("The user {$user->username} has been deleted successfully");
       redirect("users.php");
     }
    else
