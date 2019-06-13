@@ -29,7 +29,7 @@
                                          <td><?php echo $comment->author; ?> </td>
                                          <td><?php echo $comment->content; ?>
                                               <div class="action_link">
-                                                <a href="delete_comment.php?comment_id=<?php echo $comment->id ?>">Delete</a>
+                                                <a class="delete_link" href="delete_comment.php?comment_id=<?php echo $comment->id ?>">Delete</a>
                                             </div>
 
                                          </td>
