@@ -35,6 +35,10 @@
             {
               $message = join("<br/>", $user->custom_errors_array);
             }
+          $session->message($message);
+          redirect("users.php");
+
+
        }
   	}
    }
@@ -58,7 +62,7 @@
 </nav>
 
 <div id="page-wrapper">
-  <?php echo $message; ?>
+  <?php // echo $message; ?>
   <div class="container-fluid">
      <!-- Page Heading -->
      <div class="row">
