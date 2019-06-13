@@ -131,9 +131,10 @@
      public function delete_user_photo()
       {
         global $database;
-        $select_image = "SELECT * FROM photos WHERE photo_filename = '{$this->user_image}' LIMIT 1";
+        $select_image = "SELECT id FROM photos WHERE photo_filename = '{$this->user_image}'";
         $result = $database->query($select_image);
-        $image_count = count(mysqli_fetch_array($result));
+        $row = mysqli_fetch_array($result);
+        $image_count = count($row);
         if($image_count >= 1)
           {
             if($this->delete())
@@ -149,7 +150,7 @@
           {
             if($this->delete())
              {
-               $target_path = SITE_ROOT.DS. 'admin' .DS. $this->upload_directory .DS. $this->user_image;
+               $target_path = SITE_ROOT.DS. 'admin' .DS. $this->user_upload_directory .DS. $this->user_image;
                return unlink($target_path) ? true : false;
              }
             else
