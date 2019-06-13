@@ -12,7 +12,7 @@
    if($photo)
     {
       $photo->delete_photo();
-      $session->message("Photo was deleted successfully");
+      $session->message("Photo {$photo->photo_filename} was deleted successfully");
       redirect("photos.php");
     }
    else
