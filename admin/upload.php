@@ -4,11 +4,11 @@
 
 <?php 
    $message = "";
-   if(isset($_POST['submit']))
+   if(isset($_FILES['file']))
     {
       $photo = new Photo();
       $photo->photo_title = $_POST['title'];
-      $photo->set_file($_FILES['file_upload']);
+      $photo->set_file($_FILES['file']);
       if($photo->save())
        {
         $message = "Photo uploaded successfully";
