@@ -23,6 +23,8 @@
            {
               $message = join("<br/>", $user->custom_errors_array);
            }
+          $session->message($message);
+          redirect("users.php");
        }
   	}
 
