@@ -106,7 +106,7 @@
        $photo = static::find_by_id($photo_id);
        if($photo)
        {
-         echo "<h2>$photo->photo_title</h2><p>$photo->photo_caption</p><p>Description: <small>$photo->photo_description</small></p><p>Name: <small>$photo->photo_filename</small></p><p>Type: <small>$photo->photo_type</small></p><p> Size: <small>$photo->photo_size</small></p>";
+         echo "<img width='100px' src='{$photo->image_path()}' /><h2>$photo->photo_title</h2><p>$photo->photo_caption</p><p>Description: <small>$photo->photo_description</small></p><p>Name: <small>$photo->photo_filename</small></p><p>Type: <small>$photo->photo_type</small></p><p> Size: <small>$photo->photo_size</small></p>";
        }
       } 
 
