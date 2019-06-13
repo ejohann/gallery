@@ -20,7 +20,7 @@
         </nav>
 
         <div id="page-wrapper">
-          <?php echo $session->message; ?>
+          <p class="bg-success"><?php echo $session->message; ?></p>
           <div class="container-fluid">
 
                 <!-- Page Heading -->
